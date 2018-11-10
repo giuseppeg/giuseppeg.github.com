@@ -1,0 +1,54 @@
+/** define ArticleExcerpt; use strict */
+
+.ArticleExcerpt {
+  font-size: 18px;
+  margin: 1.5em 1.5em 0;
+}
+
+.ArticleExcerpt:first-child {
+  margin-top: 0;
+}
+
+.ArticleExcerpt:after {
+  content: "";
+  display: block;
+  width: 2em;
+  height: 1px;
+  background: var(--muted-text);
+  margin: 1.5em 0 0;
+}
+
+.ArticleExcerpt-title {
+  line-height: 2.2;
+}
+
+.ArticleExcerpt-link {
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 1.5em;
+  line-height: 1.1;
+  color: var(--accent);
+  font-family: var(--font);
+}
+
+.ArticleExcerpt-link:hover,
+.ArticleExcerpt-link:focus {
+  color: var(--dark-accent);
+}
+
+.ArticleExcerpt-meta {
+  color: var(--muted-text);
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin-bottom: 1.8em;
+  letter-spacing: 1px;
+  text-indent: 2px;
+}
+
+@media (--screen-large) {
+  .ArticleExcerpt {
+    max-width: var(--screen-large-size);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,103 @@
+# The folder where the blog homepage is hosted
+index_path: /blog
+
+inc:
+  # Blog Information
+  title:        "Giuseppe"
+  subtitle:     "Blog"
+  navafter:     true
+
+  # social
+  company:      false
+  url:          http://giuseppegurgone.com
+  facebook:     false
+  twitter:      giuseppegurgone
+  linkedin:     false
+  about_link:   http://giuseppegurgone.com
+  disqus: false
+
+  # Analytics
+  google_analytics_id:  'UA-9670480-6'
+
+url:         http://giuseppegurgone.com
+source:      .
+destination: ./_site
+layouts_dir: ./_layouts
+include:     ['.htaccess']
+exclude:     ['node_modules', 'package.json']
+timezone:    nil
+
+# Show future posts
+future:      false
+show_drafts: nil
+limit_posts: 0
+highlighter: 'rouge'
+
+permalink:     /:title
+
+markdown:      kramdown
+markdown_ext:  markdown,mkd,mkdn,md
+textile_ext:   textile
+
+excerpt_separator: "<!-- more -->"
+
+safe:        false
+host:        0.0.0.0
+port:        4000
+baseurl:     /
+lsi:         false
+
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+  syntax_highlighter_opts:
+    disable: true
+    wrap: div
+    line_numbers: inline
+    line_numbers_start: 1
+    tab_width: 4
+    bold_every: 10
+    css: style
+
+redcloth:
+  hard_breaks: true
+
+#
+# jekyll-assets: see more at https://github.com/ixti/jekyll-assets
+#
+assets:
+  dirname: assets
+  baseurl: /assets/
+  sources:
+    - _assets/build
+    - _assets/images
+  js_compressor: uglifier
+  cachebust: none
+  cache: false
+  gzip: [ text/css, application/javascript ]
+  debug: false
+
+gems:
+  - jekyll-feed
+  - jekyll-mentions
+  - jemoji
+
+feed:
+  path: feed.xml
+
+jekyll-mentions:
+  base_url: https://twitter.com

@@ -1,0 +1,89 @@
+/** define ArticleExcerpt; use strict */
+
+.Article {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0 1.5em;
+}
+
+.Article-header {
+  margin-bottom: 3em;
+}
+
+.Article-meta {
+  color: var(--muted-text);
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  letter-spacing: 1px;
+  text-indent: 2px;
+}
+
+.Article-title {
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 2em;
+  line-height: 1.2;
+  color: var(--heading-color);
+  font-family: var(--font);
+}
+
+.Article-subtitle {
+  font-size: 1.2em;
+  margin: 0.5em 0 0;
+  color: var(--muted-text);
+  font-weight: normal;
+}
+
+.Article-social {
+  display: block;
+  margin-top: 0.7em;
+  font-size: 0.8em;
+  color: var(--muted-text);
+}
+
+.Article-social:first-child {
+  margin-top: 6em;
+}
+
+.Article-social:last-child {
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid var(--subtle);
+}
+
+.Article-social a {
+  color: var(--accent);
+}
+
+.Article-social a:hover,
+.Article-social a:focus {
+  color: var(--dark-accent);
+}
+
+.Article-social--twitter {
+  display: table;
+  width: 100%;
+}
+
+.Article-social--comments {
+  margin: 6em 0 0;
+}
+
+.Article-twitter {
+  display: table-cell;
+  vertical-align: middle;
+  width: 1%;
+}
+
+.Article-twitter--main {
+  width: 100%;
+}
+
+@media (--screen-large) {
+  .Article,
+  .Article-social--comments {
+    max-width: var(--screen-large-size);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

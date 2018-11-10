@@ -1,0 +1,28 @@
+---
+layout: base
+---
+{% for post in site.data.externalPosts %}
+  {% unless post.draft %}
+    <article class="ArticleExcerpt">
+        <div class="ArticleExcerpt-meta">
+            <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time>
+        </div>
+        <h2 class="ArticleExcerpt-title">
+            <a class="ArticleExcerpt-link" href="{{ post.url }}" rel="prefetch">{{ post.title }}</a>
+        </h2>
+    </article>
+    {% endunless %}
+{% endfor %}
+
+{% for post in site.posts %}
+  {% unless post.draft or post.private %}
+    <article class="ArticleExcerpt">
+        <div class="ArticleExcerpt-meta">
+            <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time>
+        </div>
+        <h2 class="ArticleExcerpt-title">
+            <a class="ArticleExcerpt-link" href="{{ post.url }}" rel="prefetch">{{ post.title }}</a>
+        </h2>
+    </article>
+    {% endunless %}
+{% endfor %}

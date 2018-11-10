@@ -1,0 +1,234 @@
+.Copy h2,
+.Copy h2 a,
+.Copy h2 a:hover,
+.Copy h2 a:focus,
+.Copy h3,
+.Copy h3 a,
+.Copy h3 a:hover,
+.Copy h3 a:focus,
+.Copy h4,
+.Copy h4 a,
+.Copy h4 a:hover,
+.Copy h4 a:focus,
+.Copy h5,
+.Copy h5 a,
+.Copy h5 a:hover,
+.Copy h5 a:focus,
+.Copy h6,
+.Copy h6 a,
+.Copy h6 a:hover,
+.Copy h6 a:focus {
+    color: var(--heading-color);
+}
+
+.Copy h2 {
+  font-size: 1.5em;
+  margin: 1.5em 0 .5em;
+  font-weight: normal;
+}
+
+.Copy h3 {
+  font-size: 1.2em;
+  font-weight: normal;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+.Copy h4 {
+  font-size: 1em;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: var(--muted-text);
+}
+
+.Copy p + p {
+  margin: 1.5em 0 0;
+}
+
+.Copy ol,
+.Copy ul {
+  font-weight: 600;
+  margin: 1.5em 0;
+  padding: 0;
+  list-style-position: outside;
+  list-style-type: square;
+  padding-left: 1.5em;
+}
+
+.Copy li {
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.Copy li:hover,
+.Copy li:focus {
+  list-style-type: disc;
+}
+
+.Copy blockquote {
+  border: 0;
+  font-family: "Georgia", serif;
+  margin: 3em 0;
+  color: var(--muted-text);
+  padding: 0;
+  position: relative;
+  font-style: italic;
+}
+
+.Copy blockquote:before {
+  content: '“';
+  display: block;
+  position: absolute;
+  font-size: 2em;
+  left: -0.5em;
+  top: -0.25em;
+  line-height: 1;
+}
+
+.Copy blockquote:after {
+  content: "";
+  display: block;
+  width: 2em;
+  height: 1px;
+  background: var(--muted-text);
+  margin: 1.5em 0;
+}
+
+.Copy blockquote footer {
+  margin-top: 1.5em;
+  font-size: 0.8em;
+}
+
+@media (--screen-large) {
+  .Copy blockquote:before {
+    left: -0.75em;
+  }
+
+  .Copy blockquote footer {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin-top: -0.7em;
+    padding-left: 3em;
+  }
+}
+
+.Copy .Tldr,
+.Copy figure,
+.Copy .gist,
+.Copy pre,
+.Copy-embedTestcase {
+  margin: 3em -1.5em;
+}
+
+.Copy > iframe,
+.Copy > video {
+  width: 100%;
+}
+
+.Copy > iframe,
+.Copy > video,
+.Copy-embedTweet {
+  margin: 3em auto;
+}
+
+.Copy .Video {
+  height: 350px;
+}
+
+.Copy video.Video {
+  height: auto;
+}
+
+.Copy-embedTweet > iframe {
+  margin: 0 auto !important;
+}
+
+@media (--screen-large) {
+  .Copy .Tldr,
+  .Copy figure,
+  .Copy .gist,
+  .Copy pre,
+  .Copy-embedTestcase {
+    margin: 3em -2em;
+  }
+
+  .Copy > iframe,
+  .Copy > video {
+    width: 112% !important;
+    margin: 3em -6%;
+  }
+}
+
+.Copy figcaption {
+  color: var(--muted-text);
+  font-size: 0.8em;
+  text-transform: uppercase;
+  background: whitesmoke;
+  padding: 1em;
+}
+
+.Copy img {
+  width: 100%;
+  display: block;
+}
+
+.Copy .emoji {
+  width: auto;
+  display: inline;
+}
+
+.Copy a {
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--accent);
+  transition: color 0.2s ease;
+}
+
+.Copy a:hover,
+.Copy a:focus {
+  color: var(--dark-accent);
+}
+
+.Copy code {
+  font-size: 0.8em;
+  vertical-align: baseline;
+  padding: 0.15em 0.5em;
+  background-color: var(--subtle);
+  border-radius: 3px;
+  font-family: Monaco, monospace;
+}
+
+.Copy .highlight pre {
+  position: relative;
+  display: block;
+  overflow-x: auto;
+  padding: 2em;
+  border-radius: none;
+  background-color: var(--subtle);
+}
+
+.Copy .highlight code {
+  display: block;
+  border-radius: none;
+  padding-left: 0;
+}
+
+.Copy code[data-lang]:before {
+  content: attr(data-lang);
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em 1em;
+  background-color: var(--accent);
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.Copy .highlight:hover code[data-lang]:before {
+  display: none;
+}

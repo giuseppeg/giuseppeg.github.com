@@ -1,0 +1,54 @@
+---
+layout: base
+---
+<article class="Article">
+  <header class="Article-header">
+    <div class="Article-meta">
+      <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %d, %Y" }}</time>
+    </div>
+    <h1 class="Article-title">{{ page.title }}</h1>
+    {% if page.subtitle %}<h2 class="Article-subtitle">{{ page.subtitle }}</h2>{% endif %}
+  </header>
+  <section class="Article-content">
+    <div class="Copy">
+      {% if page.tldr %}<div class="Tldr">{{ page.tldr | markdownify }}</div>{% endif %}
+      {{ content }}
+    </div>
+  </section>
+  <footer class="Article-footer">
+    <div class="Article-social Article-social--twitter">
+      <div class="Article-twitter Article-twitter--main">
+        {% if page.tweet_id %}
+          <a href="https://twitter.com/intent/tweet?in_reply_to={{ page.tweet_id }}" rel="nofollow">Reply</a>,
+          <a href="https://twitter.com/intent/retweet?tweet_id={{ page.tweet_id }}" rel="nofollow">Retweet</a> or
+          <a href="https://twitter.com/intent/favorite?tweet_id={{ page.tweet_id }}" rel="nofollow">Favorite</a> on Twitter
+        {% else %}
+          See ya soon!
+        {% endif %}
+      </div>
+      <div class="Article-twitter">
+        <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&amp;tw_p=tweetbutton&amp;url={{ site.url }}{{ page.url | uri_escape }}&amp;via={{ site.inc.twitter | uri_escape }}" class="twitter-share-button" data-via="{{ site.inc.twitter }}" data-count="none" data-text="{{ page.title }}">Tweet</a>
+      </div>
+    </div>
+    {% if page.hn_id %}
+      <div class="Article-social">
+        Discuss on <a href="https://news.ycombinator.com/item?id={{ page.hn_id }}" rel="nofollow">HackerNews</a>
+      </div>
+    {% endif %}
+    {% if page.reddit_link %}
+      <div class="Article-social">
+        Discuss on <a href="{{ page.reddit_link }}" rel="nofollow">Reddit</a>
+      </div>
+    {% endif %}
+    {% if site.inc.disqus or page.disqus %}
+      <div class="Article-social Article-social--comments">
+        <div id="disqus_thread"></div>
+          <script>
+            var disqus_config=function(){this.page.url="{{ site.url }}{{ page.url }}",this.page.identifier='{{ page.date | date: "%Y/%m/%d" }}',this.page.title="{{ page.title }}"};!function(){var e=document,t=e.createElement("script");t.async="true";t.src="//giuseppegurgoneblog.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(t)}();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </div>
+    {% endif %}
+  </footer>
+</article>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

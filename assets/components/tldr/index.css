@@ -1,0 +1,20 @@
+/** define ArticleExcerpt; use strict */
+
+.Tldr {
+  background-color: var(--subtle);
+  font-size: 18px;
+  line-height: 1.4;
+  padding: 2em;
+}
+
+.Tldr::before {
+  content: "TL;DR";
+  float: left;
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+.Tldr code {
+  background-color: rgba(0, 0, 0, 0.06);
+}

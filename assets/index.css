@@ -1,0 +1,24 @@
+@import 'suitcss-base';
+@import './components';
+@import './app';
+
+:root {
+  /* main font family */
+  --font: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* main text color */
+  --text-color: #21272d;
+  /* muted text color */
+  --muted-text: #848484;
+  /* headings color */
+  --heading-color: green;
+  /* accent color, also used for links */
+  --accent: green;
+  /* dark accent color, used for hover, focus etc states */
+  --dark-accent: #004d00;
+  /* subtle color */
+  --subtle: #f5f5f5;
+  /* large screens breakpoint */
+  --screen-large-size: 600px;
+}
+
+@custom-media --screen-large screen and (min-width: 672px);
