@@ -1,8 +1,8 @@
 ---
 layout: base
 ---
-{% for post in site.data.externalPosts %}
-  {% unless post.draft %}
+{% for post in site.posts %}
+  {% unless post.draft or post.private %}
     <article class="ArticleExcerpt">
         <div class="ArticleExcerpt-meta">
             <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time>
@@ -14,8 +14,8 @@ layout: base
     {% endunless %}
 {% endfor %}
 
-{% for post in site.posts %}
-  {% unless post.draft or post.private %}
+{% for post in site.data.externalPosts %}
+  {% unless post.draft %}
     <article class="ArticleExcerpt">
         <div class="ArticleExcerpt-meta">
             <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time>
