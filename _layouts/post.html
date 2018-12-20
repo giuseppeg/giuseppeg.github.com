@@ -40,6 +40,9 @@ layout: base
         Discuss on <a href="{{ page.reddit_link }}" rel="nofollow">Reddit</a>
       </div>
     {% endif %}
+      <div class="Article-social">
+        <a href="https://github.com/giuseppeg/giuseppeg.github.com/edit/master/_posts/{{ page.date | date: "%Y-%m-%d" }}-{{ page.url | replace: "/", "" }}.md">Edit on GitHub</a>
+      </div>
     {% if site.inc.disqus or page.disqus %}
       <div class="Article-social Article-social--comments">
         <div id="disqus_thread"></div>
