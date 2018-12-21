@@ -24,7 +24,7 @@ layout: base
             <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time>
         </div>
         <h2 class="ArticleExcerpt-title">
-            <a class="ArticleExcerpt-link" href="{{ post.url }}" rel="prefetch">{{ post.title }}</a>
+            <a class="ArticleExcerpt-link" href="{{ post.url }}" rel="noopener" target="_blank">{{ post.title }}</a>
         </h2>
     </article>
     {% endunless %}
