@@ -39,6 +39,7 @@
 .ArticleExcerpt-meta {
   color: var(--muted-text);
   font-size: 0.8em;
+  font-weight: normal;
   text-transform: uppercase;
   margin-bottom: 1.8em;
   letter-spacing: 1px;

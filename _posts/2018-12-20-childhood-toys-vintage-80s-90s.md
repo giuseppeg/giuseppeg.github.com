@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Collection of toys from my childhood (80s-90s)
+title: A collection of toys from my childhood (80s-90s)
 date: 2018/12/20
 ---
 
