@@ -2,6 +2,7 @@
 layout: post
 title: Let me try to explain CSS in JS to you
 date: 2018/12/08
+disqus: true
 tweet_id: 1071499929028308994
 ---
 
