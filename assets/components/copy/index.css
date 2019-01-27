@@ -143,7 +143,8 @@
   height: auto;
 }
 
-.Copy-embedTweet > iframe {
+.Copy-embedTweet > iframe,
+.Copy-embedTweet  twitter-widget {
   margin: 0 auto !important;
 }
 
@@ -231,4 +232,11 @@
 
 .Copy .highlight:hover code[data-lang]:before {
   display: none;
+}
+
+.Copy hr {
+  background-color: var(--muted-text);
+  height: 1px;
+  border: 0;
+  margin: 1.5em 0;
 }
