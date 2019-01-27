@@ -5,6 +5,7 @@ date: 2019/01/27
 tldr: "Transcript of a thread on Twitter about how writing proposals or RFCs can improve the quality of software."
 disqus: true
 tweet_id: 1085115448302231552
+hn_id: 19012226
 ---
 
 <div class="Copy-embedTweet">
