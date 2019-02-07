@@ -33,7 +33,7 @@ show_drafts: nil
 limit_posts: 0
 highlighter: 'rouge'
 
-permalink:     /:title
+permalink:     /:title/
 
 markdown:      kramdown
 markdown_ext:  markdown,mkd,mkdn,md
