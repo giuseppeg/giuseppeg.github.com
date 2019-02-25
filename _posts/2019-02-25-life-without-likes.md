@@ -3,6 +3,8 @@ layout: post
 title: My New Life Without Likes
 date: 2019/02/25
 disqus: true
+tweet_id: 1100120985825611777
+hn_id: 19248796
 ---
 
 Recently I added a feature to [Refined Twitter Lite](https://github.com/giuseppeg/refined-twitter-lite) to hide Like, Retweet and Reply counts.
