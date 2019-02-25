@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The arrogance of people with many follwers
+title: The arrogance of (some) people with many follwers
 date: 2018/12/21
 ---
 
