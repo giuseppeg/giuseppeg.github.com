@@ -3,6 +3,7 @@ layout: post
 title: Abstractions
 date: 2019/03/24
 disqus: true
+tweet_id: 1109750709753393152
 ---
 
 At some point, a few years go, <abbr title="Don't repeat yourself">DRY</abbr> became a hot topic in frontend development and everybody started to advocate for it.
@@ -32,6 +33,7 @@ Before even making an abstraction however I try to follow a few steps:
 * When requirements change "fork" i.e. duplicate and tweak
 * Wait a few months for new use cases or requirements
 * Abstract
+* Refactor gradually or with a tool
 
 What is your secret sauce? I would love to hear about that in the comments or on [Twitter](https://twitter.com/giuseppegurgone).
 
