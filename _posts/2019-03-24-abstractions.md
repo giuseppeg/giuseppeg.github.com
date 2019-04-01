@@ -32,6 +32,9 @@ Before even making an abstraction however I try to follow a few steps:
 * Try not to do too much in one place
 * When requirements change "fork" i.e. duplicate and tweak
 * Wait a few months for new use cases or requirements
+
+<blockquote> After you've got a few places where that code is running, the commonalities will scream at you for abstraction and you'll be in the right frame of mind to provide that abstraction. – <a href="https://kentcdodds.com/blog/moist-programming" target="_blank">Kent C. Dodds</a></blockquote>
+
 * Abstract
 * Refactor gradually or with a tool
 
