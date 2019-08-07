@@ -2,7 +2,6 @@
 layout: post
 title: Is React Hard to Learn?
 date: 2019/08/07
-private: true
 disqus: true
 ---
 
