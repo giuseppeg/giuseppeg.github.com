@@ -3,6 +3,7 @@ layout: post
 title: Is React Hard to Learn?
 date: 2019/08/07
 disqus: true
+tweet_id: 1158999408433881088
 preview_image: https://user-images.githubusercontent.com/711311/62601627-75d8fb80-b8fa-11e9-99ed-061aeb69064e.jpg
 ---
 
