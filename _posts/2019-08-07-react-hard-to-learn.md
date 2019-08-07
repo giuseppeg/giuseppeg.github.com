@@ -3,6 +3,7 @@ layout: post
 title: Is React Hard to Learn?
 date: 2019/08/07
 disqus: true
+preview_image: https://user-images.githubusercontent.com/711311/62601627-75d8fb80-b8fa-11e9-99ed-061aeb69064e.jpg
 ---
 
 If you follow the frontend tech scene on Twitter you have probably noticed that every once in a while some topics like React or CSS in JS trigger open-ended, long debates and arguments on the validity and approachability of such technologies.
