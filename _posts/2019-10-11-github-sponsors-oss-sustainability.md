@@ -65,7 +65,7 @@ You can read [more about this idea on GitHub](https://github.com/giuseppeg/paid-
 
 ### Support and Training
 
-Selling support and training is probably the most viable options for people who want to live off Open Source Software. I doubt though that this is a viable option for the ones who work on OSS in their spare time.
+Selling support and training are probably the most viable options for people who want to live off Open Source Software. I doubt though that this is a viable option for the ones who work on OSS in their spare time, and the hard truth is that **many OSS contributors have a full time job**!
 
 ### Getting Hired
 
@@ -74,6 +74,6 @@ There are companies that use and produce Open Source Software all the time. An e
 
 ### npm Inc.
 
-npm Inc. is in a unique position because they own the biggest and most popular package registry and because they don't yet provide a service to package owners to monetize their software.
+npm Inc. is in a unique position because they own the biggest and most popular package registry and because they don't yet provide a service to package owners for monetizing their software.
 
 I really hope that they are monitoring the donation based space and eventually will come up with a better solution for everybody (even the small _fishes_) that is **not yet another donation based platform**!
