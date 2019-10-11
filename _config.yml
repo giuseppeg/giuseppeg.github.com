@@ -9,17 +9,17 @@ inc:
 
   # social
   company:      false
-  url:          http://giuseppegurgone.com
+  url:          https://giuseppegurgone.com
   facebook:     false
   twitter:      giuseppegurgone
   linkedin:     false
-  about_link:   http://giuseppegurgone.com
+  about_link:   https://giuseppegurgone.com
   disqus: false
 
   # Analytics
   google_analytics_id:  'UA-9670480-6'
 
-url:         http://giuseppegurgone.com
+url:         https://giuseppegurgone.com
 source:      .
 destination: ./_site
 layouts_dir: ./_layouts
