@@ -17,17 +17,8 @@ layout: base
   </section>
   <footer class="Article-footer">
     <div class="Article-social Article-social--twitter">
-      <div class="Article-twitter Article-twitter--main">
-        {% if page.tweet_id %}
-          <a href="https://twitter.com/intent/tweet?in_reply_to={{ page.tweet_id }}" rel="nofollow">Reply</a>,
-          <a href="https://twitter.com/intent/retweet?tweet_id={{ page.tweet_id }}" rel="nofollow">Retweet</a> or
-          <a href="https://twitter.com/intent/favorite?tweet_id={{ page.tweet_id }}" rel="nofollow">Favorite</a> on Twitter
-        {% else %}
-          See ya soon!
-        {% endif %}
-      </div>
       <div class="Article-twitter">
-        <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&amp;tw_p=tweetbutton&amp;url={{ site.url }}{{ page.url | uri_escape }}&amp;via={{ site.inc.twitter | uri_escape }}" class="twitter-share-button" data-via="{{ site.inc.twitter }}" data-count="none" data-text="{{ page.title }}">Tweet</a>
+        <a href="https://twitter.com/search?q={{ site.url }}{{ page.url }}" target="_blank">Discuss on Twitter</a>
       </div>
     </div>
     {% if page.hn_id %}
@@ -43,7 +34,7 @@ layout: base
       <div class="Article-social">
         <a href="https://github.com/giuseppeg/giuseppeg.github.com/edit/master/_posts/{{ page.date | date: "%Y-%m-%d" }}-{{ page.url | replace: "/", "" }}.md">Edit on GitHub</a>
       </div>
-    {% if site.inc.disqus or page.disqus %}
+    {% if site.inc._disqus or page._disqus %}
       <div class="Article-social Article-social--comments">
         <div id="disqus_thread"></div>
           <script>
@@ -54,4 +45,3 @@ layout: base
     {% endif %}
   </footer>
 </article>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

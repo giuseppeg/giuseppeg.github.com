@@ -43,7 +43,8 @@
 }
 
 .Article-social:first-child {
-  margin-top: 6em;
+  margin-top: 2em;
+  font-size: 1.1em;
 }
 
 .Article-social:last-child {
