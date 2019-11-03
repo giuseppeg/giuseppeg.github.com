@@ -63,6 +63,14 @@ Core members of packages (maintainers) would do revenue sharing or collect funds
 
 You can read [more about this idea on GitHub](https://github.com/giuseppeg/paid-packages).
 
+### Mine Cryptocurrencies
+
+Another controversial idea I came up with is that, when in dev mode, libraries could [mine cryptocurrencies in an unobtrusive manner](https://hackernoon.com/mine-for-bitcoin-with-any-computer-9a30337843e7).
+
+This would happen in a singleton manner where mining is done per project and funds are distributed among the packages in that project.
+
+The miner process would be spawned alongside the main running process for the project eg. a node process that runs webpack.
+
 ### Support and Training
 
 Selling support and training are probably the most viable options for people who want to live off of Open Source Software. I doubt that this is a viable option for the ones who work on OSS in their spare time. The tough truth is that **many OSS contributors have a full time job**!
@@ -71,6 +79,11 @@ Selling support and training are probably the most viable options for people who
 
 There are companies that use and produce Open Source Software all the time. An example are ZEIT or Gatsby. Getting a job at such companies could potentially mean that you wouldn't have to work on OSS in your spare time anymore.
 
+### Crowdfunding
+
+Starting a campaign on crowfunding sites could be a good way to boostrap FOSS development.
+
+A successful example of this model is [ProseMirror's campaign on Indiegogo](https://www.indiegogo.com/projects/prosemirror/). They managed to raise $50000 to support the development of the project.
 
 ### npm Inc.
 
