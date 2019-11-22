@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Automated Accessibility Tests with Puppeteer
+title: Automating Accessibility Tests with Puppeteer
 date: 2019/11/22
 preview_image: https://user-images.githubusercontent.com/711311/69422878-242b7400-0d25-11ea-880b-b84c0dfc09bc.png
 ---
