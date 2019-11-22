@@ -11,7 +11,7 @@ You can find [the recording at the end of the post](#recording-embed).
 
 WAI-ARIA Authoring Practices is a guide for understanding how to use WAI-ARIA 1.1 to create an accessible Rich Internet Application. Specifically the [site](https://www.w3.org/TR/wai-aria-practices-1.1/) comes with guidelines and examples for common design patterns and widgets like modal dialogs, tabs etc.
 
-At some point Facebook funded Bocoup to write regression tests for the examples in the WAI-ARIA website, and obviously Bocoup wrote about [this project](https://bocoup.com/work/ensuring-correctness-of-w3c-accessibility-examples) on their blog.
+A while ago Facebook funded Bocoup to write regression tests for the examples in the WAI-ARIA website, and obviously Bocoup wrote about [this project](https://bocoup.com/work/ensuring-correctness-of-w3c-accessibility-examples) on their blog.
 
 When I read the article I had the idea of creating a similar suite of tests that would be generic enough to be used in any application with very little setup.
 
