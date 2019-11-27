@@ -14,7 +14,7 @@ What do jQuery and ReactDOM have in common? Hint it starts with _30_ and ends wi
 
 ## Not a React blog post
 
-This blog post is not about React vs. jQuery but rather about our bundles' size and Content Delivery Networks.
+This blog post is not about React vs. jQuery but rather about our bundles size and Content Delivery Networks.
 
 The other day I was visiting an older site – one of the many out there – built with a classic SSR + jQuery stack. Loading felt a bit slow so I couldn't resist to open up the dev tools' Network tab and take a look.
 
@@ -32,19 +32,17 @@ At that point I went and took a look at the React SPA I work on at the moment.
 
 It turns out that it is actually smaller than the PHP+jQuery site.
 
-Sure, you will notice that there is a big elephant in the room though - that main 360kB bundle. Partially this is due to an issue with CSS which is blocking us from code splitting the application, but I am working on it and it will get better soon! See [https://git.io/JeXkw](https://git.io/JeXkw).
+You will notice that there is a big elephant in the room - that main 360kB bundle. Partially this is due to an issue with CSS which is blocking us from code splitting the application, but I am working on it and it will get better soon! See [https://git.io/JeXkw](https://git.io/JeXkw).
 
-Anyway my point is today like in the past there are sites or applications that would or would not invest in performance and reducing bundle size regardless of their stack.
+Anyway I brought up this example to demonstrate that today, like in the past, there are sites or applications that invest or not in performance tuning and reducing bundle size regardless of their stack.
 
-In many cases today we spend more time into optimizing bundle size than ever. Many might claim that bundle size wasn't a problem in the past. Wasn't it though? Surely we were using bundlers less.
-
-Today like in the past there are sites or applications that would or would not invest in performance and reducing bundle size regardless of their stack.
+In many cases I'd argue that today we spend more time into optimizing bundle size than ever. Many might claim that bundle size wasn't a problem in the past. Wasn't it though? Surely we were using bundlers less.
 
 ## The days of public CDN
 
 Back to my application, third parties libraries account for a good portion of those 360kB.
 
-What puzzles me is that nowadays, the future, in many cases third parties libraries end up in our application bundles. Sure you can bundle them away in a _vendor chunk_ but this is not the default and I cannot stop thinking about those 100+ requests the old site made and how common was that in the past.
+What puzzles me is that nowadays, the future, third parties libraries end up in our application bundles. Sure you can bundle them away in a _vendor chunk_ but this is not the default and I cannot stop thinking about those 100+ requests the old site made and how common was that in the past.
 
 Including 100+ scripts is definitely not a good thing but really I want to focus on the fact that most of them are served by public CDN.
 
@@ -64,7 +62,7 @@ Bundling third parties though seems suboptimal to me and I hope that this will c
 
 We are reinventing the wheel and for once I am very excited about it!
 
-## What can you do about it
+## What you can do about it
 
 Put mini advice/tutorial here.
 
