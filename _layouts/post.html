@@ -12,6 +12,7 @@ layout: base
   <section class="Article-content">
     <div class="Copy">
       {% if page.tldr %}<div class="Tldr">{{ page.tldr | markdownify }}</div>{% endif %}
+      {% if page.private %}<p class="Private">This article is private. Please do not share it yet!</p>{% endif %}
       {{ content }}
     </div>
   </section>

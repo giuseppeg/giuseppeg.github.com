@@ -3,4 +3,5 @@
 @import './copy';
 @import './nav';
 @import './syntax-highlighting';
+@import './private';
 @import './tldr';
