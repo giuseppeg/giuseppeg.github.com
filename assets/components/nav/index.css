@@ -14,7 +14,8 @@
   margin-top: 0.5em;
 }
 
-.Nav-link {
+.Nav-link,
+.Nav-separator {
   font-family: var(--font);
   font-size: 1.2em;
 }
@@ -25,9 +26,22 @@
   color: var(--accent);
 }
 
+.Nav-link:hover,
+.Nav-link:focus {
+  text-decoration: underline;
+}
+
+.Nav-link.is-active {
+  font-weight: 600;
+}
+
 .Nav-link--social {
   color: var(--muted-text);
   font-size: 0.8em;
+}
+
+.Nav-separator:after {
+  content: "/";
 }
 
 @media (--screen-large) {

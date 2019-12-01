@@ -59,6 +59,7 @@
 .Article-social a:hover,
 .Article-social a:focus {
   color: var(--dark-accent);
+  text-decoration: underline;
 }
 
 .Article-social--twitter {

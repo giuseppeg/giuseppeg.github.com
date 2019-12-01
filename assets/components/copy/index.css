@@ -18,7 +18,8 @@
 .Copy h6 a,
 .Copy h6 a:hover,
 .Copy h6 a:focus {
-    color: var(--heading-color);
+  color: var(--heading-color);
+  text-decoration: none;
 }
 
 .Copy h2 {
@@ -164,10 +165,9 @@
 }
 
 .Copy figcaption {
-  color: var(--muted-text);
   font-size: 0.8em;
   text-transform: uppercase;
-  background: whitesmoke;
+  background: var(--subtle);
   padding: 1em;
 }
 
@@ -183,7 +183,7 @@
 
 .Copy a {
   font-weight: 400;
-  text-decoration: none;
+  text-decoration: underline;
   color: var(--accent);
   transition: color 0.2s ease;
 }

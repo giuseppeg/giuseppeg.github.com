@@ -36,6 +36,7 @@
 .ArticleExcerpt-link:hover,
 .ArticleExcerpt-link:focus {
   color: var(--dark-accent);
+  text-decoration: underline;
 }
 
 .ArticleExcerpt-meta {

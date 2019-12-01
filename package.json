@@ -12,6 +12,8 @@
     "prebuild": "mkdir -p assets/build",
     "build": "suitcss -L -i assets -m assets/index.css assets/build/build.min.css",
     "serve": "bundle exec jekyll serve -b / -w",
+    "start": "npm run serve",
+    "dev": "npm run build && npm run serve",
     "clean": "rm -rf assets/build",
     "preformat": "npm run clean",
     "format": "mkdir -p _backup/ && cp -R index.html _posts images _backup/ && rm -f _posts/* images/* favicon.ico index.html && mv blog/index.html index.html && rm -rf blog/"
