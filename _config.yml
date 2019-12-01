@@ -5,7 +5,7 @@ inc:
   # Blog Information
   title:        "Giuseppe"
   subtitle:     "Blog"
-  navafter:     true
+  navafter:     after
 
   # social
   company:      false

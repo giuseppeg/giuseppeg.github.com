@@ -26,11 +26,9 @@
     <a href="{{ site.inc.about_link }}" class="Nav-link" aria-label="about page">{{ site.inc.title }}</a>
     <span class="Nav-separator" aria-hidden="true"></span>
     <a href="{{ site.index_path }}" class="Nav-link Nav-link--blog is-active" aria-label="blog archive">blog</a>
-  </span>
-  <span class="Nav-group">
-    {% if site.inc.twitter %}<a href="https://twitter.com/{{ site.inc.twitter }}" class="Nav-link Nav-link--social Nav-link--twitter" rel="nofollow" aria-label="twitter profile">@{{ site.inc.twitter }}</a>{% endif %}
-    {% if site.inc.facebook %}<a href="https://facebook.com/{{ site.inc.facebook }}" class="Nav-link Nav-link--social Nav-link--facebook" rel="nofollow" aria-label="facebook profile">fb/{{ site.inc.facebook }}</a>{% endif %}
-    {% if site.inc.linkedin %}<a href="https://linkedin.com/in/{{ site.inc.linkedin }}" class="Nav-link Nav-link--social Nav-link--linkedin" rel="nofollow" aria-label="linkedin profile">in/{{ site.inc.linkedin }}</a>{% endif %}
+    {% if site.inc.twitter %}<span class="Nav-separator" aria-hidden="true"></span> <a href="https://twitter.com/{{ site.inc.twitter }}" class="Nav-link Nav-link--social Nav-link--twitter" rel="nofollow" aria-label="twitter profile">@{{ site.inc.twitter }}</a>{% endif %}
+    {% if site.inc.facebook %}<span class="Nav-separator" aria-hidden="true"></span> <a href="https://facebook.com/{{ site.inc.facebook }}" class="Nav-link Nav-link--social Nav-link--facebook" rel="nofollow" aria-label="facebook profile">fb/{{ site.inc.facebook }}</a>{% endif %}
+    {% if site.inc.linkedin %}<span class="Nav-separator" aria-hidden="true"></span> <a href="https://linkedin.com/in/{{ site.inc.linkedin }}" class="Nav-link Nav-link--social Nav-link--linkedin" rel="nofollow" aria-label="linkedin profile">in/{{ site.inc.linkedin }}</a>{% endif %}
   </span>
 </nav>
 {% if site.inc.navafter == false %}<main>{{ content }}</main>{% endif %}

@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 6em 0;
+  padding: 0;
   font-family: var(--font);
   color: var(--text-color);
   font-size: 18px;
@@ -21,12 +21,18 @@ a {
 }
 
 .Nav {
-  margin-bottom: 3em;
+  font-size: 0.7rem;
+  margin-top: 1em;
 }
 
 .Nav--after {
-  margin-top: 3em;
-  margin-bottom: 0;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 4rem;
+}
+
+main {
+  margin: 4em auto;
 }
 
 iframe {
