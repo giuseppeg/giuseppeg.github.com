@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Inversion of Control",
+    "author": "Kent C. Dodds",
+    "url": "https://kentcdodds.com/blog/inversion-of-control",
+  },
+  {
+    "title": "Why you should be storing remote data in a cache (and not in state!)",
+    "author": "Jason Ankers",
+    "url": "https://medium.com/@jase.ankers/why-you-should-be-separating-your-server-cache-from-your-ui-state-1585a9ae8336",
+  },
+  {
+    "title": "Pure UI",
+    "author": "Guillermo Rauch",
+    "url": "https://rauchg.com/2015/pure-ui/",
+  },
+  {
+    "title": "The magic of “overflow: hidden”",
+    "author": "Colin Aarts",
+    "url": "https://web.archive.org/web/20161029155622/https://colinaarts.com/articles/the-magic-of-overflow-hidden",
+  },
+  {
+    "title": "“inline-block” and you",
+    "author": "Colin Aarts",
+    "url": "https://web.archive.org/web/20160806230624/http://colinaarts.com/articles/inline-block-and-you/",
+  }
+]
