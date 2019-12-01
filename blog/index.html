@@ -19,7 +19,7 @@ layout: base
 </article>
 {% for post in site.data.externalPosts %}
   {% unless post.draft %}
-    <article class="ArticleExcerpt">
+    <article class="ArticleExcerpt" id="external-posts">
         <h2 class="ArticleExcerpt-title">
             <a class="ArticleExcerpt-link" href="{{ post.url }}" rel="noopener" target="_blank">{{ post.title }}</a>
         </h2>
@@ -30,7 +30,7 @@ layout: base
     {% endunless %}
 {% endfor %}
 
-<article class="ArticleExcerpt ArticleExcerpt--section">
+<article class="ArticleExcerpt ArticleExcerpt--section" id="suggested-reads">
     <h2 class="ArticleExcerpt-meta">Suggested reads</h2>
 </article>
 {% for post in site.data.suggestedPosts %}
