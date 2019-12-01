@@ -40,7 +40,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
+  html body {
     --background-color: #21272d;
     /* main text color */
     --text-color: #f5f5f5;
