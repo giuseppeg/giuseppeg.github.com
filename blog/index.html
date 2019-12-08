@@ -1,6 +1,12 @@
 ---
 layout: base
 ---
+<nav class="ArticleExcerpt">
+    <span class="ArticleExcerpt-meta">Blog <span class="Nav-separator" aria-hidden="true"></span></span>
+    <a class="ArticleExcerpt-meta" href="#external-posts">External posts <span class="Nav-separator" aria-hidden="true"></span></a>
+    <a class="ArticleExcerpt-meta" href="#suggested-reads">Suggested reads</a>
+</nav>
+
 {% for post in site.posts %}
   {% unless post.draft or post.private %}
     <article class="ArticleExcerpt">
@@ -14,9 +20,9 @@ layout: base
     {% endunless %}
 {% endfor %}
 
-<article class="ArticleExcerpt ArticleExcerpt--section">
+<div class="ArticleExcerpt ArticleExcerpt--section" id="external-posts">
     <h2 class="ArticleExcerpt-meta">External posts</h2>
-</article>
+</div>
 {% for post in site.data.externalPosts %}
   {% unless post.draft %}
     <article class="ArticleExcerpt" id="external-posts">
@@ -30,9 +36,9 @@ layout: base
     {% endunless %}
 {% endfor %}
 
-<article class="ArticleExcerpt ArticleExcerpt--section" id="suggested-reads">
+<div class="ArticleExcerpt ArticleExcerpt--section" id="suggested-reads">
     <h2 class="ArticleExcerpt-meta">Suggested reads</h2>
-</article>
+</div>
 {% for post in site.data.suggestedPosts %}
     <article class="ArticleExcerpt">
         <h2 class="ArticleExcerpt-title">
