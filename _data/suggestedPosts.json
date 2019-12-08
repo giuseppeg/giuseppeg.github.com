@@ -1,5 +1,10 @@
 [
   {
+    "title": "Web Shared Libraries",
+    "author": "Rob Flack",
+    "url": "https://www.youtube.com/watch?v=cBY3ZcHifXw"
+  },
+  {
     "title": "Incremental Parsing with Tree-Sitter: A New Parsing System for Programming Tools",
     "author": "Max Brunsfeld",
     "url": "https://www.youtube.com/watch?v=Jes3bD6P0To"
