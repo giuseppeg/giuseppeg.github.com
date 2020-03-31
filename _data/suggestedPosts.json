@@ -1,5 +1,10 @@
 [
   {
+    "title": "Quantum Mechanics Distilled",
+    "author": "Andy Matuschak, Michael Nielsen",
+    "url": "https://quantum.country/qm"
+  },
+  {
     "title": "Web Shared Libraries",
     "author": "Rob Flack",
     "url": "https://www.youtube.com/watch?v=cBY3ZcHifXw"
