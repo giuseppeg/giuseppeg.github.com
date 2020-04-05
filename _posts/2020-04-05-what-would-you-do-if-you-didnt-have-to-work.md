@@ -11,6 +11,6 @@ Nothing for me means living the analog life a bit more, connect more with the wo
 
 I would travel around [Sicily](https://www.instagram.com/p/B6iHA0DFeky/) to visit all the places I haven't been in my life.
 
-I would also love to spend some time in eastern Europe. Everything there seems more authentic and fascinating, probably because wealth and capitalism hasn't ruined everything yet.
+I would also love to spend some time in eastern Europe. Everything there seems more authentic and fascinating, probably because wealth and capitalism haven't ruined everything yet.
 
 Then I would probably like to teach a bit, do an internship as cook or [bake pizza](https://www.instagram.com/p/B-hv8heD0Xe/) and maybe start some side project i.e. work on my "baby" whatever that'd be.
