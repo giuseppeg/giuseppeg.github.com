@@ -33,7 +33,7 @@ If you want to pursuit the OSS funding path my recommendation would be to invest
 
 GitHub Sponsors and donation based platforms are great for some, but ultimately I think that the path to OSS sustainability is to reward developers based on usage stats (installs or consumers/licenses).
 
-For example I have this tiny project that has 24k downloads a month. It is definitely providing value, so how could this translate to a few bucks? 🤷‍♂️
+For example I have this tiny project that has 24k downloads a month. In this space it is nothing but nonetheless it is definitely providing value to some. How could this translate to a few bucks? 🤷‍♂️
 
 <figure>
 <img src="https://user-images.githubusercontent.com/711311/66648696-78bed800-ec2c-11e9-81b2-1ba89b4cf668.png" alt>
