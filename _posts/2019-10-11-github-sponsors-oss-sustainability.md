@@ -85,3 +85,5 @@ A successful example of this model is [ProseMirror's campaign on Indiegogo](http
 npm Inc. is in a unique position because they own the biggest and most popular package registry and because they don't yet provide a service to package owners for monetizing their software.
 
 I really hope that they are monitoring the donation based space and eventually will come up with a better solution for everybody (even the small _fish_) that is **not yet another donation based platform**!
+
+**Update** forget this, [npm has been acquired by GitHub](https://github.blog/2020-04-15-npm-has-joined-github) :)
