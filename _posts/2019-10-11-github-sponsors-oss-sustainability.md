@@ -21,12 +21,7 @@ Getting people to donate is a very hard thing to do, and it is definitely harder
 
 Not to mention that asking for a donation feels a bit like asking strangers on the street for money, maybe for a service that you deliver to somebody else. 🙃
 
-Overall, I have a job and I am lucky enough to not have to rely on OSS funding to make a living. I work on side projects and OSS at random times and for fun, so much so that I started a (very WIP) personal [Open Source Contributor Manifesto and Policies](https://github.com/giuseppeg/contributing) to communicate this to others:
-
-<figure>
-<img src="https://user-images.githubusercontent.com/711311/66649390-5332ce00-ec2e-11e9-84c5-e068622043d7.jpeg" alt>
-<figcaption>Open Source Contributor Manifesto and Policies.</figcaption>
-</figure>
+Overall, I have a job and I am lucky enough to not have to rely on OSS funding to make a living. I work on side projects and OSS at random times and for fun, so much so that I started a (very WIP) personal [Open Source Contributor Manifesto and Policies](https://github.com/giuseppeg/contributing) to communicate this to others.
 
 If you want to pursuit the OSS funding path my recommendation would be to invest in personal branding first.
 
