@@ -19,21 +19,21 @@ layout: base
   <footer class="Article-footer">
     <div class="Article-social Article-social--twitter">
       <div class="Article-twitter">
-        <a href="https://twitter.com/search?q={{ site.url }}{{ page.url }}" target="_blank">Discuss on Twitter</a>
+        <a href="https://twitter.com/search?q={{ site.url }}{{ page.url }}" rel="noopener" target="_blank">Discuss on Twitter</a>
       </div>
     </div>
     {% if page.hn_id %}
       <div class="Article-social">
-        Discuss on <a href="https://news.ycombinator.com/item?id={{ page.hn_id }}" rel="nofollow">HackerNews</a>
+        Discuss on <a href="https://news.ycombinator.com/item?id={{ page.hn_id }}" rel="noopener" rel="nofollow">HackerNews</a>
       </div>
     {% endif %}
     {% if page.reddit_link %}
       <div class="Article-social">
-        Discuss on <a href="{{ page.reddit_link }}" rel="nofollow">Reddit</a>
+        Discuss on <a href="{{ page.reddit_link }}" rel="noopener" rel="nofollow">Reddit</a>
       </div>
     {% endif %}
       <div class="Article-social">
-        <a href="https://github.com/giuseppeg/giuseppeg.github.com/edit/master/_posts/{{ page.date | date: "%Y-%m-%d" }}-{{ page.url | replace: "/", "" }}.md">Edit on GitHub</a>
+        <a href="https://github.com/giuseppeg/giuseppeg.github.com/edit/master/_posts/{{ page.date | date: "%Y-%m-%d" }}-{{ page.url | replace: "/", "" }}.md" rel="noopener">Edit on GitHub</a>
       </div>
     {% if site.inc._disqus or page._disqus %}
       <div class="Article-social Article-social--comments">
