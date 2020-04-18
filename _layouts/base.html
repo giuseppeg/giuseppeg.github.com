@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title | xml_escape }} &mdash; {{ site.inc.title | xml_escape }}{% else %}{{ site.inc.title | xml_escape }} &mdash; {{ site.inc.subtitle | xml_escape }}{% endif %}</title>
   <link rel="stylesheet" href="{{ site.assets.baseurl }}build/build.min.css?{{ site.time | date: '%s' }}"/>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle style='fill: red' cx='10' cy='10' r='10'/%3E%3Ctext x='10' y='14' text-anchor='middle' style='fill: white; font-family: sans-serif; font-size: 0.7em;'%3E1%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
   <link href="{{ site.assets.baseurl }}feed.xml?{{ site.time | date: '%s' }}" rel="alternate" type="application/rss+xml" title="{{ site.inc.title }}" />
   <meta name="title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.inc.title }}{% endif %}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">

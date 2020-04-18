@@ -25,7 +25,7 @@ layout: base
 </div>
 {% for post in site.data.externalPosts %}
   {% unless post.draft %}
-    <article class="ArticleExcerpt" id="external-posts">
+    <article class="ArticleExcerpt">
         <h2 class="ArticleExcerpt-title">
             <a class="ArticleExcerpt-link" href="{{ post.url }}" rel="noopener" target="_blank">{{ post.title }}</a>
         </h2>
