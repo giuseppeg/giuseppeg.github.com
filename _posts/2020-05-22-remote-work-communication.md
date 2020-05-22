@@ -2,8 +2,7 @@
 layout: post
 title: Communication in the Remote Work Era
 date: 2020/05/22
-private: true
-preview_image: https://user-images.githubusercontent.com/711311/82646121-4b9bc480-9c14-11ea-8701-02198b6dff44.png
+preview_image: https://user-images.githubusercontent.com/711311/82646459-f01e0680-9c14-11ea-84cc-67e1d8bfae3b.png
 ---
 
 Recently my former co-worker Theresa tweet-asked about remote work and communication:
