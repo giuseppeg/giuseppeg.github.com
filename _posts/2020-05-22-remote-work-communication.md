@@ -23,7 +23,7 @@ Useful information must be available for others to consult at any time and it sh
 
 I have been working remotely for three+ years now and written and async communication has become the normality for me.
 
-[PSPDFKit](https://pspdfkit.com) hires with ±6h time difference so that there is always a tiny overlap and folks can discuss things on Zoom or pair if necessary. That said most of the work happens asynchronously and everybody does their best to communicate in written form with Basecamp projects, GitHub issues and Google Docs.
+[PSPDFKit](https://pspdfkit.com) hires with ±6h time difference so that there is always a tiny overlap and folks can discuss things on a videocall or pair if necessary. That said most of the work happens asynchronously and everybody does their best to communicate in written form with Basecamp projects, GitHub issues and Google Docs.
 
 Important decisions are taken during a weekly team meeting or a [proposal](/proposal-driven-development) phase.
 
