@@ -13,7 +13,7 @@ Recently my former co-worker Theresa tweet-asked about remote work and communica
 
 My reply to the tweet would be a bold _yes_!
 
-Written and async communication is key in companies that are distributed across different timezones or that allow more flexible working hours.
+Written and async communication are key in companies that are distributed across different timezones or that allow more flexible working hours.
 
 In general keeping the relevant people in the loop (updated) and include them in the decision making process is quite important when working remotely.
 
@@ -21,7 +21,7 @@ Useful information must be available for others to consult at any time and it sh
 
 ## A Practical Example
 
-I have been working remotely for three+ years now and written and async communication has become the normality for me.
+I have been working remotely for three+ years now and written and async communication have become the normality for me.
 
 [PSPDFKit](https://pspdfkit.com) hires with ±6h time difference so that there is always a tiny overlap and folks can discuss things on a videocall or pair if necessary. That said most of the work happens asynchronously and everybody does their best to communicate in written form with Basecamp projects, GitHub issues and Google Docs.
 
