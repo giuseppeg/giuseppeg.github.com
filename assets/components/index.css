@@ -1,7 +1,6 @@
-@import './article';
-@import './article-excerpt';
-@import './copy';
-@import './nav';
-@import './syntax-highlighting';
-@import './private';
-@import './tldr';
+@import "./article";
+@import "./article-excerpt";
+@import "./copy";
+@import "./nav";
+@import "./syntax-highlighting";
+@import "./note";

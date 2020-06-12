@@ -1,7 +1,10 @@
-.Private {
+.Note {
   border: 3px solid;
   border-radius: 5px;
+  padding: 1em;
+}
+
+.Note--center {
   font-weight: bold;
   text-align: center;
-  padding: 1em;
 }

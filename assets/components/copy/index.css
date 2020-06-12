@@ -24,7 +24,7 @@
 
 .Copy h2 {
   font-size: 1.5em;
-  margin: 1.5em 0 .5em;
+  margin: 1.5em 0 0.5em;
   font-weight: normal;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .Copy blockquote:before {
-  content: '“';
+  content: "“";
   display: block;
   position: absolute;
   font-size: 2em;
@@ -144,7 +144,7 @@
 }
 
 .Copy-embedTweet > iframe,
-.Copy-embedTweet  twitter-widget {
+.Copy-embedTweet twitter-widget {
   margin: 0 auto !important;
 }
 
@@ -197,8 +197,6 @@
   font-size: 0.8em;
   vertical-align: baseline;
   padding: 0.15em 0.5em;
-  background-color: var(--subtle);
-  border-radius: 3px;
   font-family: Monaco, monospace;
 }
 
@@ -207,8 +205,8 @@
   display: block;
   overflow-x: auto;
   padding: 2em;
-  border-radius: none;
-  background-color: var(--subtle);
+  border-radius: 3px;
+  border: 3px solid currentColor;
 }
 
 .Copy .highlight code {
@@ -224,8 +222,8 @@
   top: 0;
   right: 0;
   padding: 0.5em 1em;
-  background-color: var(--accent);
-  color: #fff;
+  background-color: var(--text-color);
+  color: var(--background-color);
   font-size: 0.8em;
 }
 

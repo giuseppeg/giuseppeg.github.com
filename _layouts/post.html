@@ -11,8 +11,9 @@ layout: base
   </header>
   <section class="Article-content">
     <div class="Copy">
-      {% if page.tldr %}<div class="Tldr">{{ page.tldr | markdownify }}</div>{% endif %}
-      {% if page.private %}<p class="Private">This article is private. Please do not share it yet!</p>{% endif %}
+      {% if page.tldr %}<div class="Note"><b>TL;DR</b> {{ page.tldr | markdownify }}</div>{% endif %}
+      {% if page.private %}<p class="Note Note--center">This article is private. Please do not share it yet!</p>{% endif %}
+      {% if page.note %}<p class="Note">{{ page.note }}</p>{% endif %}
       {{ content }}
     </div>
   </section>

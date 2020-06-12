@@ -1,47 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title | xml_escape }} &mdash; {{ site.inc.title | xml_escape }}{% else %}{{ site.inc.title | xml_escape }} &mdash; {{ site.inc.subtitle | xml_escape }}{% endif %}</title>
-  <link rel="stylesheet" href="{{ site.assets.baseurl }}build/build.min.css?{{ site.time | date: '%s' }}"/>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <link href="{{ site.assets.baseurl }}feed.xml?{{ site.time | date: '%s' }}" rel="alternate" type="application/rss+xml" title="{{ site.inc.title }}" />
-  <meta name="title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.inc.title }}{% endif %}">
-  <meta name="description" content="Blog and personal thoughts.">
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-  {% if page.preview_image %}
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@giuseppegurgone">
-    <meta name="twitter:creator" content="@giuseppegurgone">
-    <meta name="twitter:image:src" content='{{ page.preview_image }}'>
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.inc.title }}{% endif %}"/>
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
-    <meta property="og:site_name" content="{{ site.inc.title }}">
-    <meta name="og:image" content='{{ page.preview_image }}'>
-  {% endif %}
-</head>
-<body>
-{% if site.inc.navafter %}<main>{{ content }}</main>{% endif %}
-<nav class="Nav{%if site.inc.navafter %} Nav--after{% endif %}">
-  <span class="Nav-group">
-    <a href="{{ site.inc.about_link }}" class="Nav-link" aria-label="about page">{{ site.inc.title }}</a>
-    <span class="Nav-separator" aria-hidden="true"></span>
-    <a href="{{ site.index_path }}" class="Nav-link Nav-link--blog is-active" aria-label="blog archive">blog</a>
-    {% if site.inc.twitter %}<span class="Nav-separator" aria-hidden="true"></span> <a href="https://twitter.com/{{ site.inc.twitter }}" class="Nav-link Nav-link--social Nav-link--twitter" rel="nofollow" aria-label="twitter profile">@{{ site.inc.twitter }}</a>{% endif %}
-    {% if site.inc.facebook %}<span class="Nav-separator" aria-hidden="true"></span> <a href="https://facebook.com/{{ site.inc.facebook }}" class="Nav-link Nav-link--social Nav-link--facebook" rel="nofollow" aria-label="facebook profile">fb/{{ site.inc.facebook }}</a>{% endif %}
-    {% if site.inc.linkedin %}<span class="Nav-separator" aria-hidden="true"></span> <a href="https://linkedin.com/in/{{ site.inc.linkedin }}" class="Nav-link Nav-link--social Nav-link--linkedin" rel="nofollow" aria-label="linkedin profile">in/{{ site.inc.linkedin }}</a>{% endif %}
-  </span>
-</nav>
-{% if site.inc.navafter == false %}<main>{{ content }}</main>{% endif %}
-{% if site.inc.google_analytics_id %}
-  <script>var _gaq=[['_setAccount', '{{ site.inc.google_analytics_id }}'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));</script>
-{% endif %}
-{% if page.id %}
-  <script>
-  !function(e){e&&[].slice.call(e.querySelectorAll("h1, h2, h3, h4, h5, h6")).forEach(function(e){if(e.id){var t=document.createElement("a");t.href="#"+e.id,t.textContent=e.textContent,e.textContent="",e.appendChild(t)}})}(document.querySelector&&document.querySelector(".Article-content"));
-</script>
-{% endif %}
-<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% if page.title %}{{ page.title | xml_escape }} &mdash; {{ site.inc.title
+      | xml_escape }}{% else %}{{ site.inc.title | xml_escape }} &mdash; {{
+      site.inc.subtitle | xml_escape }}{% endif %}
+    </title>
+    <link
+      rel="stylesheet"
+      href="{{ site.assets.baseurl }}build/build.min.css?{{ site.time | date: '%s' }}"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      href="{{ site.assets.baseurl }}feed.xml?{{ site.time | date: '%s' }}"
+      rel="alternate"
+      type="application/rss+xml"
+      title="{{ site.inc.title }}"
+    />
+    <meta
+      name="title"
+      content="{% if page.title %}{{ page.title }} {% else %}{{ site.inc.title }}{% endif %}"
+    />
+    <meta name="description" content="Blog and personal thoughts." />
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    {% if page.preview_image %}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@giuseppegurgone" />
+    <meta name="twitter:creator" content="@giuseppegurgone" />
+    <meta name="twitter:image:src" content="{{ page.preview_image }}" />
+    <meta
+      property="og:title"
+      content="{% if page.title %}{{ page.title }} {% else %}{{ site.inc.title }}{% endif %}"
+    />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:site_name" content="{{ site.inc.title }}" />
+    <meta name="og:image" content="{{ page.preview_image }}" />
+    {% endif %}
+  </head>
+  <body>
+    {% if site.inc.navafter %}
+    <main>{{ content }}</main>
+    {% endif %}
+    <nav class="Nav{%if site.inc.navafter %} Nav--after{% endif %}">
+      <span class="Nav-group">
+        <a
+          href="{{ site.inc.about_link }}"
+          class="Nav-link"
+          aria-label="about page"
+          >{{ site.inc.title }}</a
+        >
+        <span class="Nav-separator" aria-hidden="true"></span>
+        <a
+          href="{{ site.index_path }}"
+          class="Nav-link Nav-link--blog is-active"
+          aria-label="blog archive"
+          >blog</a
+        >
+        {% if site.inc.twitter %}<span
+          class="Nav-separator"
+          aria-hidden="true"
+        ></span>
+        <a
+          href="https://twitter.com/{{ site.inc.twitter }}"
+          class="Nav-link Nav-link--social Nav-link--twitter"
+          rel="nofollow"
+          aria-label="twitter profile"
+          >@{{ site.inc.twitter }}</a
+        >{% endif %} {% if site.inc.facebook %}<span
+          class="Nav-separator"
+          aria-hidden="true"
+        ></span>
+        <a
+          href="https://facebook.com/{{ site.inc.facebook }}"
+          class="Nav-link Nav-link--social Nav-link--facebook"
+          rel="nofollow"
+          aria-label="facebook profile"
+          >fb/{{ site.inc.facebook }}</a
+        >{% endif %} {% if site.inc.linkedin %}<span
+          class="Nav-separator"
+          aria-hidden="true"
+        ></span>
+        <a
+          href="https://linkedin.com/in/{{ site.inc.linkedin }}"
+          class="Nav-link Nav-link--social Nav-link--linkedin"
+          rel="nofollow"
+          aria-label="linkedin profile"
+          >in/{{ site.inc.linkedin }}</a
+        >{% endif %}
+      </span>
+    </nav>
+    {% if site.inc.navafter == false %}
+    <main>{{ content }}</main>
+    {% endif %} {% if site.inc.google_analytics_id %}
+    <script>
+      var _gaq = [
+        ["_setAccount", "{{ site.inc.google_analytics_id }}"],
+        ["_trackPageview"],
+      ];
+      (function(d, t) {
+        var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        g.src =
+          ("https:" == location.protocol ? "//ssl" : "//www") +
+          ".google-analytics.com/ga.js";
+        s.parentNode.insertBefore(g, s);
+      })(document, "script");
+    </script>
+    {% endif %} {% if page.id %}
+    <script>
+      !(function(e) {
+        e &&
+          [].slice
+            .call(e.querySelectorAll("h1, h2, h3, h4, h5, h6"))
+            .forEach(function(e) {
+              if (e.id) {
+                var t = document.createElement("a");
+                (t.href = "#" + e.id),
+                  (t.textContent = e.textContent),
+                  (e.textContent = ""),
+                  e.appendChild(t);
+              }
+            });
+      })(document.querySelector && document.querySelector(".Article-content"));
+    </script>
+    {% endif %}
+    <script
+      src="//instant.page/5.1.0"
+      type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"
+    ></script>
+  </body>
 </html>
