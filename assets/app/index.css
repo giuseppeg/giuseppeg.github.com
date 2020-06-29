@@ -12,11 +12,22 @@ body {
   background-color: var(--background-color);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-rendering: optimizelegibility;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
   font-size: 1em;
 }
@@ -47,4 +58,12 @@ iframe {
 
 video {
   background-color: #000;
+}
+
+.HireMe {
+  display: block;
+  padding: 1em 0;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: bold;
 }

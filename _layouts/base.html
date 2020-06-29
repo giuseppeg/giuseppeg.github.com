@@ -37,9 +37,13 @@
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
     <meta property="og:site_name" content="{{ site.inc.title }}" />
     <meta name="og:image" content="{{ page.preview_image }}" />
+    {% endif %} {% if page.private %}
+    <meta name="robots" content="noindex" />
+    <meta name="googlebot" content="noindex" />
     {% endif %}
   </head>
   <body>
+    <a href="/hire-me" class="HireMe" style="text-align: center">Hire me 🤝</a>
     {% if site.inc.navafter %}
     <main>{{ content }}</main>
     {% endif %}
