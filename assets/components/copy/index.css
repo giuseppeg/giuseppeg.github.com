@@ -144,8 +144,10 @@
 }
 
 .Copy-embedTweet > iframe,
-.Copy-embedTweet twitter-widget {
+.Copy-embedTweet twitter-widget,
+.Copy-embedTweet .twitter-tweet {
   margin: 0 auto !important;
+  filter: grayscale(1);
 }
 
 @media (--screen-large) {
