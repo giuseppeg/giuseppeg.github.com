@@ -11,7 +11,7 @@ JavaScript and Web Engineer with a decade of industry experience.
 
 Diligent, accountable, forward thinking, pragmatic, empathetic team player.
 
-Currently interested in JavaScript and Product/Design infrastructure (tooling, frameworks, libraries and design sytems), leadership and management roles.
+Currently interested in JavaScript and Product/Design infrastructure (tooling, frameworks, libraries and design systems), leadership and management roles.
 
 Remote only.
 
@@ -61,7 +61,7 @@ Remote only.
   - Implemented the client-side part of a long polling-based synchronization system that the SDK uses for realtime collaboration
   - Implemented high-impact performance optimizations in the SDK including an initial code-splitting strategy for server and standalone (WebAssembly) based installations, improved the loading time of standalone (WebAssembly) installations, virtualized document rendering
   - created a real-world WebAssembly benchmark
-  - successfully onboarded and mentored three engineers (on a team of seven)
+  - successfully on-boarded and mentored three engineers (on a team of seven)
   - helped refining the hiring process for web engineers
 
 * ### Senior Frontend Engineer, Grape GmbH (Vienna, AT)
