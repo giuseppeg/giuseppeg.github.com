@@ -72,7 +72,6 @@
 .Copy blockquote {
   border: 0;
   margin: 3em 0;
-  color: var(--muted-text);
   padding: 0;
   position: relative;
   font-style: italic;
