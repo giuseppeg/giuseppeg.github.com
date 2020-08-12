@@ -1,0 +1,101 @@
+<!doctype html>
+<title>🎾 the tennis ball in the address bar game</title>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+  }
+  .gameOver {
+    background-color: red;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+  }
+  .container {
+    font-weight: normal;
+    font-size: 0.8em;
+    margin: 0 auto;
+    max-width: 80%;
+  }
+  .points { font-size: 4em }
+</style>
+<div>
+  <h1>Welcome to the tennis ball in the address bar game!<h1>
+  <div class="container">
+    <div aria-hidden="true" style="text-align: center">https://giuseppegurgone.com/🎾________________🕳</div>
+
+    <p>This game takes place in the browser address bar.</p>
+
+    <ul>
+      <li>Press the ENTER key to start.</li>
+      <li>The hole will start to move towards the ball.</li>
+      <li>Press the ARROW UP key to jump and prevent the ball from falling into the hole.</li>
+    </ul>
+  </div>
+</div>
+<script>
+  const ball = "🎾";
+  const hole = "🕳";
+  const ground = "_";
+  const welcome = document.body.innerHTML
+
+  let isJumping = false;
+  let released = true;
+  document.addEventListener("keydown", (event) => {
+    if (!released) { return }
+    isJumping = event.key.endsWith("Up");
+    released = false
+    if (event.key === "Enter") {
+      document.body.classList.remove("gameOver");
+      document.body.innerHTML = welcome;
+      run();
+    }
+  });
+  document.addEventListener("keyup", (event) => {
+    isJumping = false;
+    released = true
+  });
+
+  let initialUrl = location.pathname;
+  let length = 40;
+  let holeIndex = length;
+  let points = 0
+
+
+  function run() {
+    setTimeout(() => {
+      if (holeIndex == 0 && !isJumping) {
+        document.body.classList.add("gameOver");
+        document.body.innerHTML = "Game over. Press ENTER to start again.";
+        points = 0
+        holeIndex = length;
+        history.replaceState({}, "", initialUrl);
+        return;
+      }
+      document.body.innerHTML = welcome + `<p class="points">Points: ${points}</p>`
+      if (holeIndex == 0) {
+        points++
+        holeIndex = length
+      } else {
+        holeIndex -= 1
+      }
+      isJumping = false
+      render();
+      run();
+    }, 120);
+  }
+
+  function render() {
+    history.replaceState(
+      {},
+      "",
+      `/${isJumping ? ground.repeat(3) : ball}${ground.repeat(
+        holeIndex
+      )}${hole}${ground.repeat(length - holeIndex)}`
+    );
+  }
+</script>
