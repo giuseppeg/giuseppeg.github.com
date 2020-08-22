@@ -59,6 +59,9 @@
     isJumping = false;
     released = true
   });
+  window.addEventListener('unload', () => {
+    history.replaceState({}, "", initialUrl);
+  });
 
   let initialUrl = location.pathname;
   let length = 40;

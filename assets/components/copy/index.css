@@ -195,6 +195,8 @@
 }
 
 .Copy code {
+  border: 1px solid;
+  border-radius: 3px;
   font-size: 0.8em;
   vertical-align: baseline;
   padding: 0.15em 0.5em;
@@ -212,6 +214,7 @@
 
 .Copy .highlight code {
   display: block;
+  border: 0;
   border-radius: none;
   padding-left: 0;
 }
