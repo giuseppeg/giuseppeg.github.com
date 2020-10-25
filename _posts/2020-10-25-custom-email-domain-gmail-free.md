@@ -2,6 +2,7 @@
 layout: post
 title: How to Use a Custom Email Domain with Gmail for Free
 date: 2020/10/25
+private: true
 preview_image: https://user-images.githubusercontent.com/711311/97114296-edf23380-16ef-11eb-9f50-791e2e6a69af.png
 ---
 
@@ -158,12 +159,16 @@ meaning that with this tutorial you can **save €67 / year!**
         ],
         mode: 'payment',
         successUrl: window.location.href + '#checkoutSuccess',
-        cancelUrl: window.location.href  + '#checkoutError',
+        cancelUrl: window.location.href  + '#checkoutError'
       })
       .then(function(result) {
         window.location.hash = 'checkoutError'
       }, function(result) {
         window.location.hash = 'checkoutError'
       });
+  });
+
+  window.addEventListener('unload', function () {
+    window.location.hash = ''
   });
 </script>
