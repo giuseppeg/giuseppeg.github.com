@@ -59,8 +59,8 @@ We can then read the full blown CSS bundle for the page and pass it to a PostCSS
 const postcss = require("postcss")
 
 const extract = postcss.plugin("postcss-critical-ish-css", (options = {}) => {
-return root => {
-if (!options.document) { return; }
+  return root => {
+    if (!options.document) { return; }
 
     root.walkRules(rule => {
       // Preserve rules whose selector includes a standalone :pseudo-class
@@ -86,8 +86,7 @@ if (!options.document) { return; }
         }
       } catch (e) {}
     });
-
-};
+  };
 });
 {% endhighlight %}
 
@@ -102,12 +101,12 @@ const document = new JSDOM(html).window.document
 extract
 .process(css, { from: undefined }, { dom })
 .then(result => {
-const criticalCSS = result.css
-console.log(criticalCSS)
+  const criticalCSS = result.css
+  console.log(criticalCSS)
 });
 {% endhighlight %}
 
-You can see and play with a test case on [CodePen](https://codesandbox.io/s/critical-ish-css-extraction-for-ssr-and-static-sites-z0dcr) where I run the tool on Yelp.com's homepage.
+You can see and play with a test case on [CodeSandbox](https://codesandbox.io/s/critical-ish-css-extraction-for-ssr-and-static-sites-z0dcr) where I run the tool on Yelp.com's homepage.
 
 <figure>
 <img src="https://user-images.githubusercontent.com/711311/84550378-b8cde180-ad0a-11ea-8c17-314ee69fb079.png" alt role="presentation">
