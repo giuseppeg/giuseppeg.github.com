@@ -7,10 +7,6 @@ preview_image: https://user-images.githubusercontent.com/711311/84544531-c29d180
 
 In this blog post I want to share a technique for extracting the CSS needed to render a static or server side rendered web page [using JSDOM and PostCSS](#implementing-extraction-with-jsdom-and-postcss).
 
-<p class="Note">
-  NOTE: the technique described in this post is just an idea that needs validation and testing.
-</p>
-
 ## What is Critical CSS
 
 Critical CSS is the minimum amount of styles necessary to render the page content that is above-the-fold i.e. the portion of the viewport that is immediately visible when loading a web page.
@@ -129,3 +125,7 @@ The technique described in this blog post is just an idea I had a couple of year
 For example this solution is not runtime aware and it would preserve media queries that would not immediately apply but that contain a selector which matches, or if you are streaming HTML to the browser this technique will not work.
 
 Although not perfect, I believe that this approach could still help a majority of usecases.
+
+<span class="Note" style="display: block;">
+  UPDATE: it turns out that I wasn't the only one who thought about this solution. In 2018 [Jason Miller](https://twitter.com/_developit) created a Webpack plugin to do this. It is called [Critters](https://github.com/GoogleChromeLabs/critters) and it will be included in [Next.js](https://github.com/vercel/next.js/pull/16539/files) in the future.
+</span>
