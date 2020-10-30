@@ -2,7 +2,6 @@
 layout: post
 title: How to Use a Custom Email Domain with Gmail for Free
 date: 2020/10/25
-private: true
 preview_image: https://user-images.githubusercontent.com/711311/97114296-edf23380-16ef-11eb-9f50-791e2e6a69af.png
 ---
 
@@ -101,6 +100,7 @@ meaning that with this tutorial you can **save €67 / year!**
   <h2>Success! 🎉</h2>
   <p>Thank YOU for your support!</p>
   <p>We sent you an email with the full tutorial.</p>
+  <p>If you need any support you can contact me at <span id="r"></span></p>
 </section>
 <section id="checkoutError" class="Note">
   <h2>Something went wrong</h2>
@@ -152,23 +152,39 @@ meaning that with this tutorial you can **save €67 / year!**
 <script src="https://js.stripe.com/v3/"></script>
 <script>
   document.querySelector('#checkout').addEventListener('click', function () {
-    Stripe(atob('cGtfbGl2ZV81MUhnQnlHSkxPOTRMSkhYQm1DZ1FSaVdEa1FJM0lubmdvZ0ppaExOSGRHMmhRSk1URTdpODFnWjQ3bm40aE5aODFpZ2xhTUc0S3dUMUJod0p5MU01RDZBcTAwZHVjaHBNVTc'))
-      .redirectToCheckout({
-        lineItems: [
-          {price: 'price_1HgCFzJLO94LJHXB1eDo269K', quantity: 1},
-        ],
-        mode: 'payment',
-        successUrl: window.location.href + '#checkoutSuccess',
-        cancelUrl: window.location.href  + '#checkoutError'
-      })
-      .then(function(result) {
-        window.location.hash = 'checkoutError'
-      }, function(result) {
-        window.location.hash = 'checkoutError'
-      });
+    fetch('https://ppost.vercel.app/api/create-checkout-session', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        quantity: 1,
+        price: 'price_1HgCFzJLO94LJHXB1eDo269K',
+        success_url: location.href + (!location.search ? '?' : '&') + 'r=#checkoutSuccess',
+        cancel_url: location.href + '#checkoutError'
+      }),
+    }).then(function (result) {
+      return result.json();
+    }).then(function (s) {
+      Stripe(
+        atob('cGtfbGl2ZV81MUhnQnlHSkxPOTRMSkhYQm1DZ1FSaVdEa1FJM0lubmdvZ0ppaExOSGRHMmhRSk1URTdpODFnWjQ3bm40aE5aODFpZ2xhTUc0S3dUMUJod0p5MU01RDZBcTAwZHVjaHBNVTc=')
+        ).redirectToCheckout({
+          sessionId: s.id,
+        })
+    });
   });
 
   window.addEventListener('unload', function () {
     window.location.hash = ''
   });
+
+  if (location.hash.startsWith('#checkoutSuccess') &&  location.search) {
+    const r = location.search.slice(1).split('&').find(p=>p.startsWith('r='))
+    if (r) {
+      const t = document.querySelector('#r')
+      if (t) {
+        t.textContent = atob(r.slice(2))
+      }
+    }
+  }
 </script>
