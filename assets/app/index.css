@@ -37,6 +37,8 @@ a {
   text-decoration: none;
 }
 
+:focus:not(:focus-visible) { outline: none }
+
 .Nav {
   font-size: 0.7rem;
   margin-top: 1em;

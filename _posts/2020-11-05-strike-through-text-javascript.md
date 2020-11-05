@@ -27,3 +27,18 @@ window.prompt(
   )
 );
 {% endhighlight %}
+
+<button id="run" style="display: block; width: 100%; margin-top: -2em">run</button>
+
+<script>
+  document.querySelector('#run').addEventListener('click', () => {
+    window.prompt(
+      "",
+      Array.prototype.reduce.call(
+        window.prompt("Type Something"),
+        (s, c) => (s += c + "\u0336"),
+        ""
+      )
+    );
+  });
+</script>

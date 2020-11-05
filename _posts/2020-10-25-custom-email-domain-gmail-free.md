@@ -79,7 +79,7 @@ In this section we will see how to configure Gmail to add as many custom address
 If you think that this part of the tutorial is valuable, You can buy it with one click:
 
 <span class="Note" style="display: block; width: 100%; max-width: 400px; margin: 3em auto; text-align: center;">
-  <button id="checkout" style="border: 2px solid; display: inline-block; border-radius: 3px; padding: 0.25em 0.5em; cursor:pointer; margin: 1em 0 1.5em">Buy now</button><br>
+  <button id="checkout">Buy now</button><br>
   <span style="font-weight:bold;">One time</span> payment
   <span style="font-weight:bold; font-size: 1.3em; display: block;">€4.99 EUR <span style="text-decoration:line-through">€9.99</span></span>
   <small>Get 50％ discount with the `EMAIL50OFF` code</small><br>
