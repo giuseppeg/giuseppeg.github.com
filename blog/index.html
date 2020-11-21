@@ -7,6 +7,15 @@ layout: base
     <a class="ArticleExcerpt-meta" href="#suggested-reads">Suggested reads</a>
 </nav>
 
+<article class="ArticleExcerpt">
+    <h2 class="ArticleExcerpt-title">
+        <a class="ArticleExcerpt-link" href="/food" rel="prefetch">Food</a>
+    </h2>
+    <div class="ArticleExcerpt-meta">
+        ∞
+    </div>
+</article>
+
 {% for post in site.posts %}
   {% unless post.draft or post.private %}
     <article class="ArticleExcerpt">

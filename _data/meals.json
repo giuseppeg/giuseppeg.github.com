@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Sesam chicken with salad and bread",
+    "description": "",
+    "pic": "https://user-images.githubusercontent.com/711311/99888325-40216880-2c4c-11eb-9b1c-9f80fbaeb279.jpeg"
+  },
+  {
+    "title": "Pizza",
+    "description": "Mozzarella, ham, parmigiano, pistacchio crumbs, salt, black pepper, olive oil.",
+    "pic": "https://user-images.githubusercontent.com/711311/99888327-41529580-2c4c-11eb-83bd-79890548eaac.jpeg"
+  },
+  {
+    "title": "Avocado bread",
+    "description": "Toasted bread, mozzarella, avocado, salt, black pepper, olive oil, lemon juice. Tip: add cilandro on top if you have some.",
+    "pic": "https://user-images.githubusercontent.com/711311/99888324-3f88d200-2c4c-11eb-8ea3-875555eafae9.jpeg"
+  },
+  {
+    "title": "Rigatoni alla carbonara",
+    "description": "Garofalo rigatoni, guanciale (italian cured pork *similar* to bacon), egg, pecorino romano, black pepper.",
+    "pic": "https://user-images.githubusercontent.com/711311/99888323-3ef03b80-2c4c-11eb-87fe-228bdd770e1f.jpeg"
+  },
+  {
+    "title": "Pizza",
+    "description": "Margerita: tomato sauce, mozzarella, parmigiano, salt, black pepper, olive oil.",
+    "pic": "https://user-images.githubusercontent.com/711311/99888326-40b9ff00-2c4c-11eb-8619-2e33c809ca12.jpeg"
+  },
+  {
+    "title": "Sushi roll",
+    "description": "Vegan",
+    "pic": "https://user-images.githubusercontent.com/711311/99888322-3e57a500-2c4c-11eb-8c35-d09c8dd6f7db.jpg"
+  },
+  {
+    "title": "Arancini",
+    "description": "Fried rice balls with spinach and mozzarella.",
+    "pic": "https://user-images.githubusercontent.com/711311/99888320-3c8de180-2c4c-11eb-970b-9bc1bad6003d.jpg"
+  }
+]
