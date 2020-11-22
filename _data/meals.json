@@ -1,7 +1,12 @@
 [
   {
-    "title": "Sesam chicken with salad and bread",
-    "description": "",
+    "title": "Brussels sprouts",
+    "description": "Roasted brussels sprouts, mozzarella, toasted sesam bread.",
+    "pic": "https://user-images.githubusercontent.com/711311/99900467-f2d6e280-2caf-11eb-9928-4e46c02ae25f.jpg"
+  },
+  {
+    "title": "Sesam chicken",
+    "description": "With salad and bread",
     "pic": "https://user-images.githubusercontent.com/711311/99888325-40216880-2c4c-11eb-9b1c-9f80fbaeb279.jpeg"
   },
   {
