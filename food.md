@@ -6,6 +6,9 @@ title: "Food"
 Cooking is one of my hobbies and passions. For me it is a form of meditation – it helps me disconnect, brings me joy and stimulates all my senses.
 
 <style>
+  .Article {
+    max-width: 400px
+  }
   .Food img {
     max-width: 100%;
     height: auto;
