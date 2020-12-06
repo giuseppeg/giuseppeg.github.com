@@ -183,7 +183,7 @@
 }
 
 .Copy a {
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: underline;
   color: var(--accent);
   transition: color 0.2s ease;
@@ -195,35 +195,21 @@
 }
 
 .Copy code {
-  border-radius: 6px;
+  border: 1px solid;
+  border-radius: 3px;
+  font-size: 0.9em;
   vertical-align: baseline;
   padding: 0.15em 0.5em;
-  font-size: 0.9em;
-  background-color: var(--subtle);
-  border-bottom: 1px solid var(--muted-text);
+  font-family: Monaco, monospace;
 }
 
 .Copy .highlight pre {
   position: relative;
   display: block;
   overflow-x: auto;
-  padding: 1rem 1.25rem;
-  margin: 3rem -0.5rem 4rem;
-  border-radius: 8px;
-  background-color: var(--subtle);
-  transition: box-shadow 0.2s ease-out;
-  box-shadow: 0 20px 30px rgb(0, 0, 0, 0.1);
-}
-
-.Copy .highlight pre:hover {
-  box-shadow: 0 20px 30px rgb(0, 0, 0, 0.2);
-}
-
-@media (--screen-large) {
-  .Copy .highlight pre {
-    padding: 2rem;
-    margin: 3rem -1.5rem 4rem;
-  }
+  padding: 2em;
+  border-radius: 3px;
+  border: 3px solid currentColor;
 }
 
 .Copy .highlight code {
@@ -233,25 +219,20 @@
   padding-left: 0;
 }
 
-@media (--screen-large) {
-  .Copy code[data-lang]:before {
-    content: attr(data-lang);
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0.5em 1em;
-    background-color: var(--text-color);
-    color: var(--background-color);
-    font-size: 0.8em;
-    opacity: 1;
-    transition: opacity 0.2s ease-out;
-    line-height: 1.2;
-  }
+.Copy code[data-lang]:before {
+  content: attr(data-lang);
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em 1em;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  font-size: 0.8em;
+}
 
-  .Copy .highlight:hover code[data-lang]:before {
-    opacity: 0;
-  }
+.Copy .highlight:hover code[data-lang]:before {
+  display: none;
 }
 
 .Copy hr {
