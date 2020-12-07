@@ -6,9 +6,6 @@ title: "Food"
 Cooking is one of my hobbies and passions. For me it is a form of meditation – it helps me disconnect, brings me joy and stimulates all my senses.
 
 <style>
-  .Article {
-    max-width: 400px
-  }
   .Food img {
     max-width: 100%;
     height: auto;
@@ -61,6 +58,12 @@ Cooking is one of my hobbies and passions. For me it is a form of meditation –
     }
   }
   .HireMe { display: none }
+  @media screen and (min-width: 700px) {
+    .Article-back {
+        -webkit-transform: translate(-2rem,2.8rem);
+        transform: translate(-2rem,0.6rem);
+    }
+  }
 </style>
 <div class="Food">
 {% for meal in site.data.meals %}

@@ -43,6 +43,13 @@
   content: "/";
 }
 
+.Nav--after {
+  border-top: 1px solid var(--subtle);
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+}
+
 @media (--screen-large) {
   .Nav {
     max-width: var(--screen-large-size);

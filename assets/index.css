@@ -1,20 +1,22 @@
-@import 'suitcss-base';
-@import './components';
-@import './utilities';
-@import './app';
+@import "suitcss-base";
+@import "./components";
+@import "./utilities";
+@import "./app";
 
 :root {
   /* main font family */
-  --font: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --background-color: #fff;
   /* main text color */
-  --text-color: #21272d;
+  --text-color: #222;
   /* muted text color */
   --muted-text: #757575;
   /* headings color */
-  --heading-color: #21272d;
+  --heading-color: #222;
   /* accent color, also used for links */
-  --accent: #21272d;
+  --accent: #111;
   /* dark accent color, used for hover, focus etc states */
   --dark-accent: #000;
   /* subtle color */
@@ -36,7 +38,7 @@
   /* dark accent color, used for hover, focus etc states */
   --dark-accent: #fff;
   /* subtle color */
-  --subtle: #393f45;
+  --subtle: #f1f2f3;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,3 +1,9 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
 ::selection {
   background-color: var(--text-color);
   color: var(--background-color);
@@ -37,21 +43,13 @@ a {
   text-decoration: none;
 }
 
-:focus:not(:focus-visible) { outline: none }
-
-.Nav {
-  font-size: 0.7rem;
-  margin-top: 1em;
-}
-
-.Nav--after {
-  font-size: 1rem;
-  margin-top: 0;
-  margin-bottom: 4rem;
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 main {
-  margin: 4em auto;
+  position: relative;
+  margin: 4rem auto 2rem;
 }
 
 iframe {

@@ -1,7 +1,7 @@
 .Note {
-  border: 3px solid;
-  border-radius: 5px;
-  padding: 1em;
+  border: 1px solid var(--muted-text);
+  border-radius: 8px;
+  padding: 1rem;
 }
 
 .Note--center {
