@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Synchronizing Async Functions in Node.js
-date: 2020/12/5
+date: 2020/12/05
 private: true
 ---
 

@@ -68,7 +68,7 @@ Yelp, Automattic, DatoCMS, Vercel, Swiss Red Cross, PSPDFKit, Graduateland.
 
 Some of my open source work runs on wordclass websites like TikTok, Hulu, Nike, Vercel, Tencent News (xw.qq.com).
 
-Over my career I also built direct and privileged connections with engineers and leaders who work at Google, Facebook, Yelp, Uber, Netflix, Vercel, Twitter, Amazon and many more.
+Over the years I also built direct and privileged connections with engineers and leaders who work at Google, Facebook, Yelp, Uber, Netflix, Vercel, Twitter, Amazon and many more.
 
 <script>
   document.querySelector('.Form').addEventListener('submit', event => {
