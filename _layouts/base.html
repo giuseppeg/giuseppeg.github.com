@@ -48,18 +48,20 @@
     {% endif %}
     <nav class="Nav{%if site.inc.navafter %} Nav--after{% endif %}">
       <span class="Nav-group">
-        <a
-          href="{{ site.inc.about_link }}"
-          class="Nav-link"
-          aria-label="about page"
-          >{{ site.inc.title }}</a
-        >
+        <a href="/contact" class="Nav-link is-active">hire me</a>
         <span class="Nav-separator" aria-hidden="true"></span>
         <a
           href="{{ site.index_path }}"
-          class="Nav-link Nav-link--blog is-active"
+          class="Nav-link is-active"
           aria-label="blog archive"
           >blog</a
+        >
+        <span class="Nav-separator" aria-hidden="true"></span>
+        <a
+          href="https://github.com/giuseppeg"
+          class="Nav-link is-active"
+          aria-label="blog archive"
+          >github</a
         >
         {% if site.inc.twitter %}<span
           class="Nav-separator"
@@ -67,7 +69,7 @@
         ></span>
         <a
           href="https://twitter.com/{{ site.inc.twitter }}"
-          class="Nav-link Nav-link--social Nav-link--twitter"
+          class="Nav-link"
           rel="nofollow"
           aria-label="twitter profile"
           >@{{ site.inc.twitter }}</a

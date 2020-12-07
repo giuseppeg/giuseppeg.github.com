@@ -3,6 +3,7 @@ layout: post
 title: Two-Factor Authentication on Twitter without a Phone Number
 date: 2020/07/20
 preview_image: https://user-images.githubusercontent.com/711311/87919636-62299500-ca78-11ea-8a12-f9b7d25044ae.png
+private: true
 ---
 
 I have had [Two-Factor Authentication](#what-the-heck-is-two-factor-authentication) (2FA) enabled on Twitter for a long time.

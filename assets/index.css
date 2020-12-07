@@ -16,7 +16,7 @@
   /* headings color */
   --heading-color: #222;
   /* accent color, also used for links */
-  --accent: #111;
+  --accent: #000;
   /* dark accent color, used for hover, focus etc states */
   --dark-accent: #000;
   /* subtle color */
@@ -28,11 +28,11 @@
 .dark {
   --background-color: #21272d;
   /* main text color */
-  --text-color: #f5f5f5;
+  --text-color: #dfdedd;
   /* muted text color */
   --muted-text: #d7cdcd;
   /* headings color */
-  --heading-color: #f5f5f5;
+  --heading-color: #efefee;
   /* accent color, also used for links */
   --accent: #f5f5f5;
   /* dark accent color, used for hover, focus etc states */
@@ -45,11 +45,11 @@
   html body {
     --background-color: #21272d;
     /* main text color */
-    --text-color: #f5f5f5;
+    --text-color: #dfdedd;
     /* muted text color */
     --muted-text: #d7cdcd;
     /* headings color */
-    --heading-color: #f5f5f5;
+    --heading-color: #efefee;
     /* accent color, also used for links */
     --accent: #f5f5f5;
     /* dark accent color, used for hover, focus etc states */

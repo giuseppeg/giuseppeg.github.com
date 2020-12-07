@@ -3,7 +3,7 @@
 .Nav {
   font-size: 18px;
   line-height: 1.4;
-  margin: 0 1.5em;
+  margin: 0 1.5rem;
 }
 
 .Nav-group {
@@ -17,7 +17,10 @@
 .Nav-link,
 .Nav-separator {
   font-family: var(--font);
-  font-size: 1.2em;
+}
+
+.Nav-separator {
+
 }
 
 .Nav-link:hover,
@@ -32,7 +35,7 @@
 }
 
 .Nav-link.is-active {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .Nav-link--social {

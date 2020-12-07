@@ -4,6 +4,7 @@ title: The blog about nothing
 date: 2015/08/09
 tldr: "Sometimes I like to code useless things just for the sake of writing code. Last weekend I modded [an existing blog](https://github.com/anthonyshort/anthonyshort.github.io) that you can now [re-mod](https://github.com/giuseppeg/giuseppeg.github.com) or use as-is if you want."
 tweet_id: 630568797884190720
+private: true
 ---
 
 I wanted to code something that wasn't for work so I put together a Jekyll blog which is now running on github pages.

@@ -5,7 +5,7 @@ date: 2020/04/05
 preview_image: https://scontent-vie1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/77096283_133650544759553_8980911112077718119_n.jpg?_nc_ht=scontent-vie1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=EvA7zff9R_sAX_4hkmg&oh=547d8957df8015490bd182ccbd5d8628&oe=5EB19746
 ---
 
-I would probably do nothing for a while 😅
+I would probably do nothing for a while
 
 Nothing for me means living the analog life a bit more, connect more with the world and try to enjoy all the smaller things that I neglect because I sit in front of a screen for a good part of the day.
 

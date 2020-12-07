@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Strike Through Text Effect with JavaScript
-date: 2020/11/05
+date: 2016/03/26
 preview_image: https://user-images.githubusercontent.com/711311/98287679-fecf5e80-1fa5-11eb-9394-d6776c4fab30.png
 ---
 
