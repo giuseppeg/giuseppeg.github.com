@@ -10,14 +10,14 @@ If you work with CSS you may be familiar with the Lego analogy by Nicole Sulliva
 
 <div class="Copy-embedTweet">
   <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">&quot;Treat code like Lego. Break code into the smallest little blocks possible.&quot; — <a href="https://twitter.com/csswizardry">@csswizardry</a> (via <a href="https://twitter.com/stubbornella">@stubbornella</a>) <a href="https://twitter.com/hashtag/btconf?src=hash">#btconf</a></p>&mdash; Smashing Magazine (@smashingmag) <a href="https://twitter.com/smashingmag/status/339024926197559296">May 27, 2013</a></blockquote>
-  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <!-- <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 </div>
 
-Follow this advice and, with time, you will end up with a collection of *reusable* components that you can *compose* to build complex UIs.
+Follow this advice and, with time, you will end up with a collection of _reusable_ components that you can _compose_ to build complex UIs.
 
 This concept is so simple that even my dad got it.
 
-*Reusability* and *composabilty* are the key to success.
+_Reusability_ and _composabilty_ are the key to success.
 
 There are many articles and talks around the reusability topic, but I have [rarely](https://github.com/suitcss/suit/blob/master/doc/components.md#adapting-to-ancestral-context) read about composability in CSS so I figured I'd write something about it.
 
@@ -27,7 +27,7 @@ There are many articles and talks around the reusability topic, but I have [rare
 
 Composability is about making the pieces play nicely together.
 
-CSS Rules that affect *composability* compare to Lego studs: they let us <cite>assemble components in various combinations to satisfy specific user requirements</cite>.
+CSS Rules that affect _composability_ compare to Lego studs: they let us <cite>assemble components in various combinations to satisfy specific user requirements</cite>.
 
 Unlike Lego bricks though, UI components are not just glued together with studs.
 They are laid out and **spaced** in different ways to adapt to the context of the current view.
@@ -43,23 +43,23 @@ Margins are often global and set to arbitrary standard values at the beginning o
 Take this code for example:
 
 {% highlight css %}
-/** typography.css */
+/\*_ typography.css _/
 h1 { margin: 3em 0; }
 p { margin-bottom: 1em; }
 
-/** components/form.css */
+/\*_ components/form.css _/
 .form { margin-bottom: 3em; }
-.form__input { margin-bottom: 1em; }
+.form\_\_input { margin-bottom: 1em; }
 {% endhighlight %}
 
 Here we have some global typography and default <code>margin-bottom</code> for the <code>form</code> component. A similar setup can be found in many popular or in-house CSS frameworks.
 
-The code is well organized in separate files and it is *reusable*, but depending on the use-case it could be hard to *compose* the components without having to reset a couple of rules.
+The code is well organized in separate files and it is _reusable_, but depending on the use-case it could be hard to _compose_ the components without having to reset a couple of rules.
 
 There are some things to keep in mind when building UI components or a pattern library:
 
-* Context and default margins
-* Margin direction
+- Context and default margins
+- Margin direction
 
 ## Context and default margins
 
@@ -74,13 +74,13 @@ In the context of a header for example a default <code>margin-bottom</code> <spa
   <script async src="//s.codepen.io/assets/embed/ei.js"></script>
 </div>
 
-I have seen and had to reset similar rules many times &mdash; *design* choices were made years ago by someone who didn't or couldn't predict my case of use, and now I have to deal with it :)
+I have seen and had to reset similar rules many times &mdash; _design_ choices were made years ago by someone who didn't or couldn't predict my case of use, and now I have to deal with it :)
 
 UI components instead should be self-contained. The component root should be free of any rule that may affect composability, specifically:
 
-* margins
-* layout rules like position (absolute or fixed), float, transform, etc
-* width
+- margins
+- layout rules like position (absolute or fixed), float, transform, etc
+- width
 
 We can then use higher-order components or utilities to fit the component into a specific context.
 

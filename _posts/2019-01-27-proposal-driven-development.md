@@ -9,7 +9,7 @@ hn_id: 19012226
 ---
 
 <div class="Copy-embedTweet">
-<blockquote class="twitter-tweet" data-link-color="#008000"><p lang="en" dir="ltr">We have been practicing Proposal (RFC) Driven Development at work and it is awesome 😎 Thread because I am too lazy to write a blog post:</p>&mdash; Giuseppe (@giuseppegurgone) <a href="https://twitter.com/giuseppegurgone/status/1085115448302231552?ref_src=twsrc%5Etfw">January 15, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-link-color="#008000"><p lang="en" dir="ltr">We have been practicing Proposal (RFC) Driven Development at work and it is awesome 😎 Thread because I am too lazy to write a blog post:</p>&mdash; Giuseppe (@giuseppegurgone) <a href="https://twitter.com/giuseppegurgone/status/1085115448302231552?ref_src=twsrc%5Etfw">January 15, 2019</a></blockquote> <!-- <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 </div>
 
 The idea is to write and discuss a proposal in a Google doc before starting development. Normally we do this for features or changes that somehow might affect existing app architecture or when implementing a new abstraction or API.
@@ -29,7 +29,7 @@ Last but not least a Google doc file is a great tool to discuss as non tech peop
 My friend Angus brought up a good point then:
 
 <div class="Copy-embedTweet">
-<blockquote class="twitter-tweet" data-link-color="#008000"><p lang="en" dir="ltr">And afterwards I’m thinking did we solve this just RFC or by prototyping and then sharing progress?</p>&mdash; angus 牛 (@angustweets) <a href="https://twitter.com/angustweets/status/1085212821841793024?ref_src=twsrc%5Etfw">January 15, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-link-color="#008000"><p lang="en" dir="ltr">And afterwards I’m thinking did we solve this just RFC or by prototyping and then sharing progress?</p>&mdash; angus 牛 (@angustweets) <a href="https://twitter.com/angustweets/status/1085212821841793024?ref_src=twsrc%5Etfw">January 15, 2019</a></blockquote> <!-- <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 </div>
 
 I do quick and dirty prototyping too to validate assumptions. Normally I don't spend more than one day on this so it hardly morphs into the product (although it has happened).

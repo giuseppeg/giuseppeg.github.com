@@ -3,19 +3,21 @@ layout: base
 ---
 
 <style>
-  .Article-header img {
+  .Article-header .Avatar {
+    margin-bottom: 3rem;
+  }
+  .Article-header .Avatar img {
     display: block;
     width: 64px;
     height: 64px;
     border-radius: 100%;
-    margin-bottom: 3rem;
   }
   @media (min-width: 520px) {
     .Article-header {
       position: relative;
       padding-right: 84px;
     }
-    .Article-header img {
+    .Article-header .Avatar {
       position: absolute;
       right: 0;
       top: 50%;
@@ -24,19 +26,19 @@ layout: base
     }
   }
   .Article-meta {
-    margin-top: 0.25em
+    margin-top: 0.25em;
   }
 </style>
-
 <article class="Article">
   <header class="Article-header">
-    <img
-      src="https://user-images.githubusercontent.com/711311/101384003-2a51ab80-38ba-11eb-8460-853d88885671.jpeg"
-      width="64"
-      height="64"
-      alt
-      aria-hidden="true"
-    />
+    <div class="Avatar" aria-hidden="true">
+      <img
+        src="https://user-images.githubusercontent.com/711311/101384003-2a51ab80-38ba-11eb-8460-853d88885671.jpeg"
+        width="64"
+        height="64"
+        alt
+      />
+    </div>
     <h1 class="Article-title"><a href="/">{{ page.title }}</a></h1>
     {% if page.subtitle %}
     <p class="Article-meta">{{ page.subtitle }}</p>
@@ -48,16 +50,3 @@ layout: base
     </div>
   </section>
 </article>
-<script>
-  !(function(d, s, id) {
-    var js,
-      fjs = d.getElementsByTagName(s)[0],
-      p = /^http:/.test(d.location) ? "http" : "https";
-    if (!d.getElementById(id)) {
-      js = d.createElement(s);
-      js.id = id;
-      js.src = p + "://platform.twitter.com/widgets.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }
-  })(document, "script", "twitter-wjs");
-</script>

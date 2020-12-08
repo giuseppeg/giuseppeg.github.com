@@ -8,7 +8,7 @@ preview_image: https://user-images.githubusercontent.com/711311/87129645-f71ada0
 The tweet below is spot-on
 
 <div class="Copy-embedTweet">
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">the rush of sending a tweet is only topped by the relief of deleting it less than five minutes later</p>&mdash; bradley babendir (@therealbradbabs) <a href="https://twitter.com/therealbradbabs/status/1281309026052169729?ref_src=twsrc%5Etfw">July 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">the rush of sending a tweet is only topped by the relief of deleting it less than five minutes later</p>&mdash; bradley babendir (@therealbradbabs) <a href="https://twitter.com/therealbradbabs/status/1281309026052169729?ref_src=twsrc%5Etfw">July 9, 2020</a></blockquote> <!-- <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 </div>
 
 I have tweeted and deleted plenty of useless content.
@@ -18,7 +18,7 @@ Often this is due to the fact that Twitter is not a realtime messaging app but I
 Sometimes it is because I don't think before sending out a reply.
 
 <div class="Copy-embedTweet">
-<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">I love Twitter <a href="https://t.co/UsFGZihfbG">pic.twitter.com/UsFGZihfbG</a></p>&mdash; Giuseppe (@giuseppegurgone) <a href="https://twitter.com/giuseppegurgone/status/1260164481054904321?ref_src=twsrc%5Etfw">May 12, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">I love Twitter <a href="https://t.co/UsFGZihfbG">pic.twitter.com/UsFGZihfbG</a></p>&mdash; Giuseppe (@giuseppegurgone) <a href="https://twitter.com/giuseppegurgone/status/1260164481054904321?ref_src=twsrc%5Etfw">May 12, 2020</a></blockquote> <!-- <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 </div>
 
 Tweets instead are permanent short thoughts. Think of them as short blog posts.

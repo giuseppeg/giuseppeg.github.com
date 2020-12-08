@@ -21,22 +21,22 @@ Most of the times, in fact, we end up just making our lives harder and simply sc
 Quoting the wise [Michele Bertoli](https://twitter.com/MicheleBertoli)
 
 <div class="Copy-embedTweet">
-<blockquote class="twitter-tweet" data-link-color="#008000"><p lang="en" dir="ltr">Your abstraction looks beautiful until the requirements change.<br>And yes, they are going to change.<br><br>Some metrics you can track:<br>- time *to* workaround (e.g. additionalProps)<br>- time *with* workaround (before the abstraction gets refactored)<br><br>Does it worth the effort?</p>&mdash; Michele Bertoli (@MicheleBertoli) <a href="https://twitter.com/MicheleBertoli/status/1073142067411517440?ref_src=twsrc%5Etfw">December 13, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-link-color="#008000"><p lang="en" dir="ltr">Your abstraction looks beautiful until the requirements change.<br>And yes, they are going to change.<br><br>Some metrics you can track:<br>- time *to* workaround (e.g. additionalProps)<br>- time *with* workaround (before the abstraction gets refactored)<br><br>Does it worth the effort?</p>&mdash; Michele Bertoli (@MicheleBertoli) <a href="https://twitter.com/MicheleBertoli/status/1073142067411517440?ref_src=twsrc%5Etfw">December 13, 2018</a></blockquote> <!-- <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 </div>
 
 _Abstraction phobia_ is real. I have it too yet I am often tempted to come up with smart-ass abstractions.
 
 Before even making an abstraction however I try to follow a few steps:
 
-* Make something that solves my current use case
-* Try not to do too much in one place
-* When requirements change "fork" i.e. duplicate and tweak
-* Wait a few months for new use cases or requirements
+- Make something that solves my current use case
+- Try not to do too much in one place
+- When requirements change "fork" i.e. duplicate and tweak
+- Wait a few months for new use cases or requirements
 
 <blockquote> After you've got a few places where that code is running, the commonalities will scream at you for abstraction and you'll be in the right frame of mind to provide that abstraction. – <a href="https://kentcdodds.com/blog/moist-programming" target="_blank">Kent C. Dodds</a></blockquote>
 
-* Abstract
-* Refactor gradually or with a tool
+- Abstract
+- Refactor gradually or with a tool
 
 What is your secret sauce? I would love to hear about that in the comments or on [Twitter](https://twitter.com/giuseppegurgone).
 

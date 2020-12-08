@@ -25,7 +25,7 @@ Not to mention that asking for a donation feels a bit like asking strangers on t
 If you want to pursuit the OSS funding path my recommendation would be to invest in personal branding first.
 
 <div class="Copy-embedTweet">
-<blockquote class="twitter-tweet" data-conversation="none" data-link-color="#008000"><p lang="en" dir="ltr">Want to know the real answer? Marketing!<br><br>- Speak at confs<br>- Write articles<br>- Tweet tweet tweet tweet tweet</p>&mdash; Max Stoiber (@mxstbr) <a href="https://twitter.com/mxstbr/status/1026334495975329793?ref_src=twsrc%5Etfw">August 6, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none" data-link-color="#008000"><p lang="en" dir="ltr">Want to know the real answer? Marketing!<br><br>- Speak at confs<br>- Write articles<br>- Tweet tweet tweet tweet tweet</p>&mdash; Max Stoiber (@mxstbr) <a href="https://twitter.com/mxstbr/status/1026334495975329793?ref_src=twsrc%5Etfw">August 6, 2018</a></blockquote> <!-- <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 </div>
 
 **Update** to date I have **0** sponsors. Clearly I haven't worked on marketing and none of my projects is that valuable, yet I get a constant stream of issues/PRs.

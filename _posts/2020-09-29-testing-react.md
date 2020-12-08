@@ -74,7 +74,7 @@ Althought this is my preferred way, it might not always be the right choice and 
 Most of the time flakiness is due to environment issues or timing issues. The following rules can help reducing timing issues:
 
 <div class="Copy-embedTweet">
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The two golden rules of e2e testing:<br><br>1. avoid setTimeout<br>2. wait for things i.e. retry until timeout</p>&mdash; Giuseppe (@giuseppegurgone) <a href="https://twitter.com/giuseppegurgone/status/1275751333426069505?ref_src=twsrc%5Etfw">June 24, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The two golden rules of e2e testing:<br><br>1. avoid setTimeout<br>2. wait for things i.e. retry until timeout</p>&mdash; Giuseppe (@giuseppegurgone) <a href="https://twitter.com/giuseppegurgone/status/1275751333426069505?ref_src=twsrc%5Etfw">June 24, 2020</a></blockquote> <!-- <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 </div>
 
 ### Reactive Testing

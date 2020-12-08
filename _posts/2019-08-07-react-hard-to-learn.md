@@ -34,7 +34,7 @@ Like many other technologies, React solves many problems in a brilliant way but 
 The fact that React is not a full blown framework then forces developers to make a lot of decisions that can be a (temporary) blocker for many.
 
 <div class="Copy-embedTweet">
-<blockquote class="twitter-tweet" data-link-color="#008000"><p lang="en" dir="ltr">Spent the last 2 hours researching and picking a CSS-in-JS and routing library for React. It really shouldn&#39;t be this hard.</p>&mdash; Sebastian McKenzie (@sebmck) the creator of Babel <a href="https://twitter.com/sebmck/status/1156721441003339776?ref_src=twsrc%5Etfw">August 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-link-color="#008000"><p lang="en" dir="ltr">Spent the last 2 hours researching and picking a CSS-in-JS and routing library for React. It really shouldn&#39;t be this hard.</p>&mdash; Sebastian McKenzie (@sebmck) the creator of Babel <a href="https://twitter.com/sebmck/status/1156721441003339776?ref_src=twsrc%5Etfw">August 1, 2019</a></blockquote> <!-- <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 </div>
 
 Learning React can be <span aria-hidden="true">~~hard~~</span> uncomfortable if you are new to it and don't have the necessary amount of time or patience to familiarise with it but so is anything else and I personally think that in the long term it is worth the effort.
@@ -59,7 +59,7 @@ With this little knowledge and a read of the docs somebody with HTML and JavaScr
 
 This is all I knew before I took my first React job.
 
-What made it easy for me was the fact that I could assimilate the basic knowledge for fun in my spare time without the pressure of having to get *the job* done.
+What made it easy for me was the fact that I could assimilate the basic knowledge for fun in my spare time without the pressure of having to get _the job_ done.
 
 When I had to use React at work the other crucial bit for me was the fact that the development enviroment was already set up: other engineers had configured webpack, Babel etc.
 
@@ -75,10 +75,6 @@ Learning something new like React could be intimidating and hard, especially whe
 
 It is good to keep in mind that whether you can do this or not is not the technology's fault.
 
-React is pretty good at what it does and in the right situation even *easy* to learn.
+React is pretty good at what it does and in the right situation even _easy_ to learn.
 
 ✌️
-
-
-
-

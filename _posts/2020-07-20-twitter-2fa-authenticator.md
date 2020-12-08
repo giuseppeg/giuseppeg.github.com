@@ -15,7 +15,7 @@ After the recent [Twitter hack and the rumors](https://krebsonsecurity.com/2020/
 The good news is that they now do! It seems that they have been supporting alternative and more secure methods for a while and I totally missed it (so did you maybe?):
 
 <div class="Copy-embedTweet">
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We&#39;re also making it easier to secure your account with Two-Factor Authentication. Starting today, you can enroll in 2FA without a phone number. <a href="https://t.co/AxVB4QWFA1">https://t.co/AxVB4QWFA1</a></p>&mdash; Twitter Safety (@TwitterSafety) <a href="https://twitter.com/TwitterSafety/status/1197621020229804054?ref_src=twsrc%5Etfw">November 21, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We&#39;re also making it easier to secure your account with Two-Factor Authentication. Starting today, you can enroll in 2FA without a phone number. <a href="https://t.co/AxVB4QWFA1">https://t.co/AxVB4QWFA1</a></p>&mdash; Twitter Safety (@TwitterSafety) <a href="https://twitter.com/TwitterSafety/status/1197621020229804054?ref_src=twsrc%5Etfw">November 21, 2019</a></blockquote> <!-- <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 </div>
 
 ## How to Enable It
