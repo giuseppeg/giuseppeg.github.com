@@ -19,9 +19,9 @@ If you want to hire me, just let me know about your project and [let’s talk](h
 
 ## Clients
 
-Over my career I lived and worked in five different countries for great companies and with great customers:
+Over my career I lived in five different countries and worked for great companies and with great customers:
 
-Yelp, Automattic, DatoCMS, Vercel, Swiss Red Cross, Graduateland.
+Yelp, Automattic, DatoCMS, Vercel, Swiss Red Cross, PSPDFKit, Graduateland.
 
 Some of my open source work runs on wordclass websites like TikTok, Hulu, Nike, Vercel, Tencent News (xw.qq.com).
 
