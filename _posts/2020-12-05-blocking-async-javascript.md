@@ -39,6 +39,8 @@ In the worker
 - When the async function resolves, post a message to the main thread with the result
 - Unlock the Int32Array
 
+Keep in mind that the return value of the async function must be serializable/transferable because the worker has to transfer it to the main thread.
+
 Once the main thread is unblocked, it can read the message containing the result sent by the worker synchronously with Node.js' [receiveMessageOnPort](https://nodejs.org/api/worker_threads.html#worker_threads_worker_receivemessageonport_port).
 
 Here's what this looks like in code:
@@ -98,8 +100,6 @@ This solution relies on two features that are unique to Node.js:
 
 - `Atomics.wait` works in the main thread. In a browser environment this is not allowed and calling this method will result in a `TypeError`
 - `receiveMessageOnPort` which is only available since Node.js v12.3.0
-
-Keep in mind that the return value of the async function must be serializable/transferable because the worker has to transfer it to the main thread.
 
 Finally in order to make the multi-thread solution blazing fast™️ I had to keep the worker around instead of reistantiating it on every invocation of my `main` synchronous function.
 
