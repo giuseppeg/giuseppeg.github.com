@@ -99,15 +99,15 @@ This solution relies on two features that are unique to Node.js:
 - `Atomics.wait` works in the main thread. In a browser environment this is not allowed and calling this method will result in a `TypeError`
 - `receiveMessageOnPort` which is only available since Node.js v12.3.0
 
-Also keep in mind that the return value of the async function must be serializable/transferable.
+Keep in mind that the return value of the async function must be serializable/transferable because the worker has to transfer it to the main thread.
+
+Finally in order to make the multi-thread solution blazing fast™️ I had to keep the worker around instead of reistantiating it on every invocation of my `main` synchronous function.
 
 ## Alternatives
 
 An alternative solution I had been using for a while is to run the async function in a child process which is spawned synchronously with Node's `child_process.spawnSync` and then read the result from `stdout`.
 
 However spawning a lot of processes is an order of magnitude slower than using threads (a worker).
-
-Finally in order to make the multi-thread solution blazing fast™️ I had to keep the worker around instead of reistantiating it on every invocation of my `main` synchronous function.
 
 ## An OSS Success Story
 
