@@ -7,27 +7,27 @@ private: true
 
 Recently I found myself researching for ways to run an async function in the main thread in a blocking and synchronous fashion.
 
-The reason why I went on this journey is that a Babel plugin of mine needs to call into an async function to perform some work but Babel doesn't really provide an asynchronous API and node visitors must be synchronous.
+The reason why I went on this journey is that a Babel plugin of mine needs to call an async function to perform some work but Babel doesn't really provide an asynchronous API and therefore node visitors must be synchronous.
 
-## Mutex to the Rescue
+## Shared Memory and Mutex to the Rescue
 
 Thanks to a brilliant suggestion from [Nicolò Ribaudo](https://twitter.com/NicoloRibaudo), I settled on a solution that involves running the async function in a worker and blocking the main thread with a mutex on a [SharedArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) implemented with [Atomics](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics).
 
 ## Details
 
-At the core of this solution is a [SharedArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) that is _an object used to represent a generic, fixed-length raw binary data buffer in a way that it can be used to create views on shared memory_.
+At the core of this solution is a [SharedArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) that is an object that can be used to create views on shared memory.
 
 Two threads, say main and worker, can share this object without having to transfer it back and forth.
 
 When working on shared memory a thread can claim and lock the object to protect shared data from being simultaneously accessed by other threads. This is done via a synchronization primitive called mutex.
 
-In JavaScript we can use [Atomics](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics) to implement a mutex.
+In JavaScript we can use [Atomics](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics) to implement mutexes.
 
-If a worker thread locks a shared object, we can force the main thread to wait (sleep) until our asynchronus function has been settled and the lock is released.
+Now if a worker thread locks a shared object, we can force the main thread to wait (sleep) until our asynchronus function has been settled and the lock is released.
 
 In the main thread we can
 
-- Create an Int32Array from a SharedArrayBuffer
+- Create an Int32Array mapped onto a SharedArrayBuffer
 - Create an instance of the worker
 - Post a message to the worker with a reference to the Int32Array
 - Wait (sleep) for the Int32Array to be unlocked by the worker
@@ -90,19 +90,33 @@ parentPort.addListener("message", async ({ signal, port, args }) => {
 });
 {% endhighlight %}
 
-## Considerations and Alternatives
+## Considerations
 
-Blocking the main thread is usually a bad idea and something you might never need to do yet I think that the approach I just described is very interesting.
+While blocking the main thread is usually a bad idea and something you might never need to do, I think that the approach I just showed you is very interesting.
 
 This solution relies on two features that are unique to Node.js:
 
-- `Atomics.wait` works in the main thread.<br> In a browser environment this is not allowed and calling this method will result in a `TypeError`
-- `receiveMessageOnPort` is only available since Node.js v12.3.0
+- `Atomics.wait` works in the main thread. In a browser environment this is not allowed and calling this method will result in a `TypeError`
+- `receiveMessageOnPort` which is only available since Node.js v12.3.0
 
-Also the return value of the async function must be serializable/transferable.
+Also keep in mind that the return value of the async function must be serializable/transferable.
 
-An alternative solution is to run the async function in a child process which is spawned synchronously with Node's `child_process.spawnSync` and read the result from stdout.
+## Alternatives
 
-In fact this is what I had been doing for a while. However spawning a lot of processes is an order of magnitude slower than using threads (a worker).
+An alternative solution I had been using for a while is to run the async function in a child process which is spawned synchronously with Node's `child_process.spawnSync` and then read the result from `stdout`.
+
+However spawning a lot of processes is an order of magnitude slower than using threads (a worker).
 
 Finally in order to make the multi-thread solution blazing fast™️ I had to keep the worker around instead of reistantiating it on every invocation of my `main` synchronous function.
+
+## An OSS Success Story
+
+This research started when the web team at the XXX Company (asking for permission to metion) hired me to perform an audit of their codebase with the goal of improving build time in development.
+
+With their financial support I was able to investigate and research for a solution to improve the speed of my open source plugin by 5x💨
+
+In return I decided to start sponsoring Nicolò Ribaudo not only as a way to thank him for taking the time to chat with me about this solution but also to support the outstanding work he has been doing on Babel.
+
+Nicolò is an Italian fellow 🇮🇹 He is core member of the Babel team, TC39 invited expert and among many other things co-author of the [Records and Tuples ECMAScript proposal](https://github.com/tc39/proposal-record-tuple) which I am very excited about.
+
+If you are reading this article there is a good chance that you benefit from his open source work too so, if you or your company has the means, please consider [sponsoring him on GitHub](https://github.com/sponsors/nicolo-ribaudo)!
