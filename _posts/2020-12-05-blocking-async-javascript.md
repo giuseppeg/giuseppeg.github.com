@@ -117,6 +117,6 @@ With their financial support I was able to investigate and research for a soluti
 
 In return I decided to start sponsoring Nicolò Ribaudo not only as a way to thank him for taking the time to chat with me about this solution but also to support the outstanding work he has been doing on Babel.
 
-Nicolò is a fellow Italian 🇮🇹 engineer and mathematician. He is core member of the Babel team, TC39 invited expert and among many other things co-author of the [Records and Tuples ECMAScript proposal](https://github.com/tc39/proposal-record-tuple) which I am very excited about.
+Nicolò is a fellow Italian 🇮🇹 engineer and mathematician. He is core member of the Babel team, TC39 invited expert and among many other things co-author of the [Record and Tuple ECMAScript proposal](https://github.com/tc39/proposal-record-tuple) which I am very excited about.
 
 If you are reading this article there is a good chance that you benefit from his open source work too so, if you or your company has the means, please consider [sponsoring him on GitHub](https://github.com/sponsors/nicolo-ribaudo)!
