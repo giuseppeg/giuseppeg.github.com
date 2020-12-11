@@ -1,0 +1,15 @@
+{
+  "name": "contact-form-fn",
+  "version": "0.1.0",
+  "description": "send email",
+  "main": "api/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giuseppe Gurgone",
+  "license": "MIT",
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.0",
+    "micro-cors": "^0.1.1"
+  }
+}
