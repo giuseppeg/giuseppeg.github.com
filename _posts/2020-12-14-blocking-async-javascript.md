@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Synchronizing Async Functions in Node.js
-date: 2020/12/05
+date: 2020/12/14
 private: true
+preview_image: https://user-images.githubusercontent.com/711311/101990059-c1e14080-3ca4-11eb-912a-495c048b51df.png
 ---
 
 Recently I found myself researching for ways to run an async function in the main thread in a blocking and synchronous fashion.
