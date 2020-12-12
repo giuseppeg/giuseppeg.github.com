@@ -8,7 +8,7 @@ preview_image: https://user-images.githubusercontent.com/711311/101990059-c1e140
 
 Recently I found myself researching for ways to run an async function in the main thread in a blocking and synchronous fashion.
 
-The reason why I went on this journey is that a Babel plugin of mine needs to call an async function to perform some work but Babel doesn't really provide an asynchronous API and therefore node visitors must be synchronous.
+The reason why I went on this journey is that a Babel plugin of mine needs to call an async function to perform some work, but Babel doesn't really provide an asynchronous API and therefore node visitors must be synchronous.
 
 ## Shared Memory and Mutex to the Rescue
 
@@ -24,7 +24,9 @@ When working on shared memory a thread can claim and lock the object to protect 
 
 In JavaScript we can use [Atomics](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics) to implement mutexes.
 
-Now if a worker thread locks a shared object, we can force the main thread to wait (sleep) until our asynchronus function has been settled and the lock is released.
+Now if a worker thread locks a shared object, we can force the main thread to wait until our async function has been settled and the lock is released, hereby achieving our initial goal to synchronize the async function.
+
+### Implementation
 
 In the main thread we can
 
@@ -81,7 +83,7 @@ const { parentPort } = require("worker_threads");
 const asyncFunction = require("./asyncFunction");
 //
 parentPort.addListener("message", async ({ signal, port, args }) => {
-  // This is the asynchronous function that we want to run "synchornously"
+  // This is the async function that we want to run "synchornously"
   const result = await asyncFunction(...args);
   // Post the result to the main thread before unlocking "signal"
   port.postMessage({ result });
@@ -102,13 +104,13 @@ This solution relies on two features that are unique to Node.js:
 - `Atomics.wait` works in the main thread. In a browser environment this is not allowed and calling this method will result in a `TypeError`
 - `receiveMessageOnPort` which is only available since Node.js v12.3.0
 
-Finally in order to make the multi-thread solution blazing fast™️ I had to keep the worker around instead of reistantiating it on every invocation of my `main` synchronous function.
+Finally in order to make the multi-thread solution blazing fast™️ I had to keep the worker around instead of instantiating it on every invocation of my `main` synchronous function.
 
 ## Alternatives
 
-An alternative solution I had been using for a while is to run the async function in a child process which is spawned synchronously with Node's `child_process.spawnSync` and then read the result from `stdout`.
+An alternative solution I have been using for a while is to run the async function in a child process which is spawned synchronously with Node's `child_process.spawnSync` and then to read the result from `stdout`.
 
-However spawning a lot of processes is an order of magnitude slower than using threads (a worker).
+However, spawning many processes is significantly slower than using threads (a worker).
 
 ## An OSS Success Story
 
@@ -118,6 +120,6 @@ With their financial support I was able to investigate and research for a soluti
 
 In return I decided to start sponsoring Nicolò Ribaudo not only as a way to thank him for taking the time to chat with me about this solution but also to support the outstanding work he has been doing on Babel.
 
-Nicolò is a fellow Italian 🇮🇹 engineer and mathematician. He is core member of the Babel team, TC39 invited expert and among many other things co-author of the [Record and Tuple ECMAScript proposal](https://github.com/tc39/proposal-record-tuple) which I am very excited about.
+Nicolò is a fellow Italian 🇮🇹 engineer and mathematician. He is a core member of the Babel team, TC39 invited expert and co-author of the [Record and Tuple ECMAScript proposal](https://github.com/tc39/proposal-record-tuple) which I am very excited about.
 
-If you are reading this article there is a good chance that you benefit from his open source work too so, if you or your company has the means, please consider [sponsoring him on GitHub](https://github.com/sponsors/nicolo-ribaudo)!
+If you are reading this article there is a good chance that you benefit from his open source work, too. So if you or your company have the means, please consider [sponsoring him on GitHub](https://github.com/sponsors/nicolo-ribaudo)!
