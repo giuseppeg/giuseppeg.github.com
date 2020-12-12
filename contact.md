@@ -24,6 +24,7 @@ If you want to hire me, just let me know about your project and let’s talk:
     <select name="project" required>
       <option value="Infra">Tooling and JavaScript infrastructure</option>
       <option value="Audit">Performance or Codebase Audit</option>
+      <option value="Design Systems">Design Systems</option>
       <option value="Product">Product Development</option>
       <option value="Other">Other</option>
     </select>
