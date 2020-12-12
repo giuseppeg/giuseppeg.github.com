@@ -112,7 +112,7 @@ However spawning a lot of processes is an order of magnitude slower than using t
 
 ## An OSS Success Story
 
-This research started when the web team at the XXX Company (asking for permission to metion) hired me to perform an audit of their codebase with the goal of reducing build time in development.
+This research started when a client hired me to perform an audit of their codebase with the goal of reducing build time in development.
 
 With their financial support I was able to investigate and research for a solution to improve the speed of my open source plugin by 5x💨 &nbsp;and consequently bring their build time <u>from ~2 minutes to ~25 seconds</u>!
 
