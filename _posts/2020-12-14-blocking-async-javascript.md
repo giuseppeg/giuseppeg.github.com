@@ -10,9 +10,9 @@ Recently I found myself researching for ways to run an async function in the mai
 
 The reason why I went on this journey is that a Babel plugin of mine needs to call an async function to perform some work, but Babel doesn't really provide an asynchronous API and therefore node visitors must be synchronous.
 
-## Shared Memory and Mutex to the Rescue
+## Shared Memory and Semaphores to the Rescue
 
-Thanks to a brilliant suggestion from [Nicolò Ribaudo](https://twitter.com/NicoloRibaudo), I settled on a solution that involves running the async function in a worker and blocking the main thread with a mutex on a [SharedArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) implemented with [Atomics](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics).
+Thanks to a brilliant suggestion from [Nicolò Ribaudo](https://twitter.com/NicoloRibaudo), I settled on a solution that involves running the async function in a worker and blocking the main thread with a binary semaphore on a [SharedArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) implemented with [Atomics](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics).
 
 ## Details
 
@@ -20,15 +20,15 @@ At the core of this solution is a [SharedArrayBuffer](https://developer.mozilla.
 
 Two threads, say main and worker, can share this object without having to transfer it back and forth.
 
-When working on shared memory a thread can claim and lock the object to protect shared data from being simultaneously accessed by other threads. This is done via a synchronization primitive called mutex.
+When working on shared memory it is important to synchronize access to the object in order to protect shared data from being simultaneously accessed by other threads. This is done via a synchronization primitive called semaphore.
 
-In JavaScript we can use [Atomics](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics) to implement mutexes.
+In JavaScript we can use [Atomics](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics) to implement semaphores.
 
-Now if a worker thread locks a shared object, we can force the main thread to wait until our async function has been settled and the lock is released, hereby achieving our initial goal to synchronize the async function.
+Now if we execute our async function in a worker thread, using `Atomics.wait` we can create a semaphore and force the main thread to wait until our async function has been settled, hereby achieving our initial goal to synchronize the async function.
 
 ### Implementation
 
-In the main thread we can
+In the main thread
 
 - Create an Int32Array mapped onto a SharedArrayBuffer
 - Create an instance of the worker
@@ -83,7 +83,7 @@ const { parentPort } = require("worker_threads");
 const asyncFunction = require("./asyncFunction");
 //
 parentPort.addListener("message", async ({ signal, port, args }) => {
-  // This is the async function that we want to run "synchornously"
+  // This is the async function that we want to run "synchronously"
   const result = await asyncFunction(...args);
   // Post the result to the main thread before unlocking "signal"
   port.postMessage({ result });
