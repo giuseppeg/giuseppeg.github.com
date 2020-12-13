@@ -2,7 +2,6 @@
 layout: post
 title: Synchronizing Async Functions in Node.js
 date: 2020/12/14
-private: true
 preview_image: https://user-images.githubusercontent.com/711311/102014427-27d9d080-3d56-11eb-923a-d6758810ef60.png
 ---
 
@@ -20,11 +19,11 @@ At the core of this solution is a [SharedArrayBuffer](https://developer.mozilla.
 
 Two threads, say main and worker, can share this object without having to transfer it back and forth.
 
-When working on shared memory it is important to synchronize access to the object in order to protect shared data from being simultaneously accessed by other threads. This is done via a synchronization primitive called semaphore.
+When working on shared memory it is important to synchronize access to it in order to protect shared data from being simultaneously accessed by other threads. This is done via a synchronization primitive called semaphore.
 
 In JavaScript we can use [Atomics](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics) to implement semaphores.
 
-Now if we execute our async function in a worker thread, using `Atomics.wait` we can create a semaphore and force the main thread to wait until our async function has been settled, hereby achieving our initial goal to synchronize the async function.
+If we execute our async function in a worker thread, we can create a semaphore with `Atomics` and force the main thread to wait until the worker notifies us that our async function has been settled, hereby achieving our initial goal to synchronize the async function.
 
 ### Implementation
 
