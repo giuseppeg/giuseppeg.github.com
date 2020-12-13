@@ -23,7 +23,10 @@
       name="title"
       content="{% if page.title %}{{ page.title }} {% else %}{{ site.inc.title }}{% endif %}"
     />
-    <meta name="description" content="Blog and personal thoughts." />
+    <meta
+      name="description"
+      content="{% if page.description %}{{ page.description }}{% else %}Blog and personal thoughts.{% endif %}"
+    />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     {% if page.preview_image %}
     <meta name="twitter:card" content="summary" />
