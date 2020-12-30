@@ -95,7 +95,7 @@ const html = renderPage()
 const document = new JSDOM(html).window.document
 
 extract
-.process(css, { from: undefined }, { dom })
+.process(css, { from: undefined }, { document })
 .then(result => {
   const criticalCSS = result.css
   console.log(criticalCSS)
