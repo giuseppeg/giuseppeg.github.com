@@ -45,6 +45,71 @@
   color: var(--muted-text);
 }
 
+.Copy h1:target,
+.Copy h2:target,
+.Copy h3:target,
+.Copy h4:target,
+.Copy h5:target,
+.Copy h6:target {
+  position: relative;
+  padding-top: 3rem;
+}
+
+.Copy h1:target:before,
+.Copy h2:target:before,
+.Copy h3:target:before,
+.Copy h4:target:before,
+.Copy h5:target:before,
+.Copy h6:target:before {
+  content: '→';
+  position: absolute;
+  right: 100%;
+  margin-right: 0.75rem;
+  opacity: 0;
+  animation: highlight 3s ease-out;
+}
+
+.Copy h1:target:after,
+.Copy h2:target:after,
+.Copy h3:target:after,
+.Copy h4:target:after,
+.Copy h5:target:after,
+.Copy h6:target:after {
+  content: '';
+  position: absolute;
+  right: 100%;
+  line-height: 0;
+  width: 2em;
+  height: 2em;
+  opacity: 0;
+  background-color: currentColor;
+  border-radius: 100%;
+  margin-right: -0.1em;
+  top: 3rem;
+  margin-top: -0.15em;
+  opacity: 0;
+  animation: highlightCircle 2s ease-out;
+}
+
+@keyframes highlight {
+  10% {
+    opacity: 0.7;
+  }
+  75% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes highlightCircle {
+  10% {
+    opacity: 0.15;
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(3);
+  }
+}
+
 .Copy p + p {
   margin: 1.5em 0 0;
 }
