@@ -61,7 +61,7 @@
 .Copy h4:target:before,
 .Copy h5:target:before,
 .Copy h6:target:before {
-  content: '→';
+  content: "→";
   position: absolute;
   right: 100%;
   margin-right: 0.75rem;
@@ -75,7 +75,7 @@
 .Copy h4:target:after,
 .Copy h5:target:after,
 .Copy h6:target:after {
-  content: '';
+  content: "";
   position: absolute;
   right: 100%;
   line-height: 0;
@@ -334,6 +334,7 @@
   cursor: pointer;
   user-select: none;
   margin: 1em 0 1.5em;
+  color: var(--text-color);
 }
 
 .Copy button:hover {
