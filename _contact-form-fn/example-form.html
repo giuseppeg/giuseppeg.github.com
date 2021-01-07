@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<meta encoding="utf-8" />
+<title>contact form</title>
+
+<!-- the action is your deployment url -->
+<form action="https://FORM-XYZ.vercel.app/api" method="post" class="Form">
+  <label
+    >Company<input type="text" name="company" placeholder="Acme Inc." required
+  /></label>
+  <label
+    >Your email address<input
+      type="email"
+      name="email"
+      placeholder="contact@acme.com"
+      required
+  /></label>
+  <label>
+    Project type
+    <select name="project" required>
+      <option value="Infra">Infra</option>
+      <option value="Audit">Audit</option>
+      <option value="Design Systems">Design Systems</option>
+      <option value="Product">Product Development</option>
+      <option value="Other">Other</option>
+    </select>
+  </label>
+  <label>
+    Budget
+    <select name="budget" required>
+      <option value="€1000-3000 EUR">€1000-2000 EUR</option>
+      <option value="€3000-5000 EUR">€3000-5000 EUR</option>
+      <option value="€5000-10000 EUR">€5000-10000 EUR</option>
+      <option value="€10000+ EUR">€10000+ EUR</option>
+    </select>
+  </label>
+  <label
+    >Project details<textarea
+      name="message"
+      placeholder="Hey there, let's talk about working together!"
+      required
+    ></textarea
+  ></label>
+
+  <div>
+    <button>Send<span aria-hidden="true"> →</span></button>
+  </div>
+</form>
+
+<script>
+  document.querySelector(".Form").addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const button = event.target.querySelector("button");
+    button.disabled = true;
+
+    fetch(event.target.action, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(Object.fromEntries(new FormData(event.target))),
+    })
+      .then((response) => {
+        button.disabled = false;
+        if (!response.ok) {
+          // Optionally track the failure.
+          throw new Error();
+        }
+        const success = document.createElement("p");
+        success.innerHTML =
+          "Thank you for contacting me! I will get back to you as soon as possible.<br>Have a great day!";
+        event.target.replaceWith(success);
+      })
+      .catch(() => {
+        button.disabled = false;
+        alert(`⚠ Something went wrong. Please contact me at hello@acme.com`);
+      });
+  });
+</script>

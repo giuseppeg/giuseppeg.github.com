@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "contact-form-fn",
   "version": "0.1.0",
   "description": "send email",

@@ -25,57 +25,60 @@ async function handler(req, res) {
     return res.status(200).end();
   }
 
+  const requiredFieldsErrorMessages = {
+    email: "Missing recipient email address",
+    message: "Missing message",
+    company: "Missing company name",
+    project: "Missing project type",
+    budget: "Missing budget information",
+  };
+
   let status = 500;
-  let message = "mail not sent";
+  let message = "An error occurred while trying to send the message";
   const { body } = req;
 
   switch (true) {
     case req.method !== "POST":
-      status = 500;
+      status = 405;
       message = "Accepts only POST requests";
       break;
     case !process.env.SENDGRID_KEY:
       status = 500;
-      message = "Key not configured";
+      message = "SendGrid Key not configured";
+      break;
+    case !process.env.CONTACT_EMAIL:
+      status = 500;
+      message = "Destination email address not configured";
       break;
     case !body:
       status = 400;
       message = "Missing body";
       break;
-    case !process.env.CONTACT_EMAIL:
-      status = 500;
-      message = "Email not configured";
-      break;
-    case !body.email:
-      status = 422;
-      message = "Missing email address";
-      break;
-    case !body.company || !body.project || !body.budget:
-      status = 422;
-      message = "Missing information";
-      break;
-    case !body.message:
-      status = 422;
-      message = "Missing message";
-      break;
     default: {
-      const { message: emailBody, ...others } = body;
-      const msg = {
-        to: process.env.CONTACT_EMAIL,
-        from: process.env.CONTACT_EMAIL,
-        subject: `${body.company} <> Giuseppe Gurgone | ${body.project}`,
-        text: `${emailBody}\n\n${Object.entries(others)
-          .map(([key, value]) => `- ${key}: ${value}`)
-          .join("\n")}`,
-      };
+      const errors = Object.entries(requiredFieldsErrorMessages).filter(
+        ([name]) => typeof body[name] == "undefined"
+      );
+      if (errors.length > 0) {
+        status = 422;
+        message = Object.fromEntries(errors);
+        break;
+      }
+
       try {
         sgMail.setApiKey(process.env.SENDGRID_KEY);
-        await sgMail.send(msg);
+        await sgMail.send({
+          to: process.env.CONTACT_EMAIL,
+          from: process.env.CONTACT_EMAIL,
+          subject: composeSubject(body),
+          text: composeMessage(body),
+        });
         status = 200;
         message = "OK";
       } catch (error) {
-        status = 500;
-        message = "An error occurred while trying to send the mssage";
+        // Use `error.response` to debug SendGrid failures.
+        // The most common one normally is that
+        // you haven't verified the sender (your) e-mail address i.e. process.env.CONTACT_EMAIL
+        // See https://sendgrid.com/docs/for-developers/sending-email/sender-identity/
       }
       break;
     }
@@ -86,4 +89,15 @@ async function handler(req, res) {
     .status(status)
     .json({ message })
     .end();
+}
+
+function composeSubject(formParams) {
+  return `${formParams.company} <> Giuseppe Gurgone | ${formParams.project}`;
+}
+
+function composeMessage(formParams) {
+  const { message, ...others } = formParams;
+  return `${message}\n\n${Object.entries(others)
+    .map(([key, value]) => `- ${key}: ${value}`)
+    .join("\n")}`;
 }
