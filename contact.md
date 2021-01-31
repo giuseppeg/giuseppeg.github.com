@@ -53,23 +53,23 @@ If you want to hire me, just let me know about your project and let’s talk:
 
 ## Services
 
-These days I am mainly working on tooling, architecture and JavaScript infrastructure, web applications performance as well as consulting by offering technical oversight, guidance or leading groups of engineers throughout all the phases of a project.
+These days I am mainly working on tooling, architecture and JavaScript infrastructure, web application performance as well as consulting by offering technical oversight, guidance or leading groups of engineers through all the phases of a project.
 
-In short, generally I am available for writing code if necessary but, considering my experience, my value is rather in **guiding and advicing** your team and helping you **figure out solutions that have high impact on your business**. That's what I am most interested in doing.
+In short, I am available for writing code if necessary, but considering my experience my value rather lies in **guiding and advising** your team and helping you **figure out solutions that have a high impact on your business**. That's what I am most interested in doing.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We&#39;ve been working with Giuseppe for many years, he&#39;s a great engineer, understands product, and gets things done.</p><br>&mdash; Peter Steinberger, CEO at PSPDFKit GmbH.</blockquote>
 
-With all that said please let me know if you are seeking other types of help and I'll be happy to discuss about it!
+With that being said, please let me know if you are seeking other types of help and I'll be happy to discuss it!
 
 ## Clients
 
-Over my career I lived in five different countries and worked for great companies and with great customers:
+Throughout my career I have lived in five different countries and worked for great companies and with great customers:
 
 Yelp, Automattic, DatoCMS, Vercel, Swiss Red Cross, PSPDFKit, Graduateland.
 
-Some of my open source work runs on wordclass websites like TikTok, Hulu, Nike, Vercel, Tencent News (xw.qq.com).
+Some of my open source work runs on world-class websites like TikTok, Hulu, Nike, Vercel, Tencent News (xw.qq.com).
 
-Over the years I also built direct and privileged connections with engineers and leaders who work at Google, Facebook, Yelp, Uber, Netflix, Vercel, Twitter, Amazon and many more.
+Over the years I have also built direct and privileged connections with engineers and leaders who work at Google, Facebook, Yelp, Uber, Netflix, Vercel, Twitter, Amazon and many more.
 
 <script>
   document.querySelector('.Form').addEventListener('submit', event => {
