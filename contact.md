@@ -55,7 +55,7 @@ If you want to hire me, just let me know about your project and let’s talk:
 
 These days I am mainly working on tooling, architecture and JavaScript infrastructure, web applications performance as well as consulting by offering technical oversight, guidance or leading groups of engineers throughout all the phases of a project.
 
-In short, generally I am available for writing code if necessary but, considering my experience, my value is rather in helping you **solving problems and figuring out solutions that have high impact on your business and team**. That's what I am most interested in doing.
+In short, generally I am available for writing code if necessary but, considering my experience, my value is rather in **guiding and advicing** your team and helping you **solving problems and figuring out solutions that have high impact on your business**. That's what I am most interested in doing.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We&#39;ve been working with Giuseppe for many years, he&#39;s a great engineer, understands product, and gets things done.</p><br>&mdash; Peter Steinberger, CEO at PSPDFKit GmbH.</blockquote>
 
