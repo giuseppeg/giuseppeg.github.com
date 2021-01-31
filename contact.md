@@ -4,7 +4,7 @@ title: Giuseppe Gurgone
 subtitle: JavaScript and Web Engineer
 ---
 
-Senior JavaScript and Web Engineer with a decade of industry experience and available for freelance collaborations.
+Senior JavaScript and Web Engineer with a decade of industry experience and available for consulting and freelance collaborations.
 
 If you want to hire me, just let me know about your project and let’s talk:
 
@@ -24,8 +24,8 @@ If you want to hire me, just let me know about your project and let’s talk:
     <select name="project" required>
       <option value="Infra">Tooling and JavaScript infrastructure</option>
       <option value="Audit">Performance or Codebase Audit</option>
+      <option value="Team Guidance">Team Guidance</option>
       <option value="Design Systems">Design Systems</option>
-      <option value="Product">Product Development</option>
       <option value="Other">Other</option>
     </select>
   </label>
@@ -51,14 +51,15 @@ If you want to hire me, just let me know about your project and let’s talk:
 </div>
 </form>
 
-## Areas of Expertise
+## Services
 
-- JavaScript infrastructure, tools and workflows
-- Performance audits and optimization of React applications and libraries
-- Babel plugins development and large scale automated code transformations
-- Scaling Design Systems
-- CSS and CSS-in-JS
-- Mentoring, teaching, productivity & engineering processes
+These days I am mainly working on tooling, architecture and JavaScript infrastructure, web applications performance as well as consulting by offering technical oversight, guidance or leading groups of engineers throughout all the phases of a project.
+
+In short, generally I am available for writing code if necessary but, considering my experience, my value is rather in helping you **solving problems and figuring out solutions that have high impact on your business and team**. That's what I am most interested in doing.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We&#39;ve been working with Giuseppe for many years, he&#39;s a great engineer, understands product, and gets things done.</p><br>&mdash; Peter Steinberger, CEO at PSPDFKit GmbH.</blockquote>
+
+With all that said please let me know if you are seeking other types of help and I'll be happy to discuss about it!
 
 ## Clients
 
