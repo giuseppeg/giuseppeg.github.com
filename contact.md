@@ -61,16 +61,6 @@ In short, I am available for writing code if necessary, but considering my exper
 
 With that being said, please let me know if you are seeking other types of help and I'll be happy to discuss it!
 
-## Open Source
-
-Over the years, I have done highly impactful contributions to projects like SUIT CSS, Next.js, React Native for Web and many other projects.
-
-My most successful open source projects are [xm](https://twitter.com/giuseppegurgone/status/1305851405660549122) and Vercel's styled-jsx which I co-authored.
-
-I love to work in public on projects that have an impact to your business and the entirey community.
-
-Hit me up if you want to sponsor my work or need help with open source project.
-
 ## Clients
 
 Throughout my career I have lived in five different countries and worked for great companies and with great customers:
@@ -80,6 +70,23 @@ Yelp, Automattic, DatoCMS, Vercel, Swiss Red Cross, PSPDFKit, Graduateland.
 Some of my open source work runs on world-class websites like TikTok, Hulu, Nike, Vercel, Tencent News (xw.qq.com).
 
 Over the years I have also built direct and privileged connections with engineers and leaders who work at Google, Facebook, Yelp, Uber, Netflix, Vercel, Twitter, Amazon and many more.
+
+## Open Source
+
+Over the years, I have done highly impactful contributions to projects like SUIT CSS, Next.js, React Native for Web and many other projects.
+
+My most successful open source projects are [xm](https://twitter.com/giuseppegurgone/status/1305851405660549122) and Vercel's [styled-jsx](https://www.npmjs.com/package/styled-jsx) which I co-authored.
+
+I love to work in public on projects that have an impact on your business and the entire community.
+
+For example the tech team at the Swiss Red Cross hired me to improve the performance of the PostCSS plugin for styled-jsx.
+
+> With this work the plugin is now ~5x faster!
+>
+> The development build which previously took ~2.5 minutes
+> now takes 29 seconds!
+
+Hit me up if you want to sponsor my work or need help with open source project.
 
 <script>
   document.querySelector('.Form').addEventListener('submit', event => {
