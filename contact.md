@@ -53,13 +53,23 @@ If you want to hire me, just let me know about your project and let’s talk:
 
 ## Services
 
-These days I am mainly working on tooling, architecture and JavaScript infrastructure, web application performance as well as consulting by offering technical oversight, guidance or leading groups of engineers through all the phases of a project.
+These days I am mainly working on tooling, architecture and JavaScript infrastructure, web application performance, design systems as well as consulting by offering technical oversight, guidance or leading groups of engineers through all the phases of a project.
 
 In short, I am available for writing code if necessary, but considering my experience my value rather lies in **guiding and advising** your team and helping you **figure out solutions that have a high impact on your business**. That's what I am most interested in doing.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We&#39;ve been working with Giuseppe for many years, he&#39;s a great engineer, understands product, and gets things done.</p><br>&mdash; Peter Steinberger, CEO at PSPDFKit GmbH.</blockquote>
 
 With that being said, please let me know if you are seeking other types of help and I'll be happy to discuss it!
+
+## Open Source
+
+Over the years, I have done highly impactful contributions to projects like SUIT CSS, Next.js, React Native for Web and many other projects.
+
+My most successful open source projects are [xm](https://twitter.com/giuseppegurgone/status/1305851405660549122) and Vercel's styled-jsx which I co-authored.
+
+I love to work in public on projects that have an impact to your business and the entirey community.
+
+Hit me up if you want to sponsor my work or need help with open source project.
 
 ## Clients
 
