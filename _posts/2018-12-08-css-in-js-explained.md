@@ -139,13 +139,13 @@ I want to conclude this write-up with a reflection on team work and conventions.
 
 I read a few times that "people should just learn CSS" rather than looking for answers (and solutions) in CSS in JS.
 
-While I think that learning something new never hurts (go learn some CSS in depth if you can!), I also think that many ignore the fact that we work with people (teams and organizations) with diverse backgrounds and expertise.
+While I think that learning something new or master a language never hurts, I also think that many ignore the fact that we work with people (teams and organizations) with diverse backgrounds and expertise.
 
 This is great because different expertise makes for a great end result.
 
 In an organization where individuals and teams work on the same product it is however unrealistic to expect that only specialists get to write CSS or that everyone must be a CSS specialist.
 
-The reason why folks move to CSS in JS has to do with letting a tool do the dirty work of enforcing some rules for everybody by making that the default. I failed too many times at trying to make conventions like BEM & friends work at org level - by the way I am one of the core maintainers of SUIT CSS :)
+The reason why folks move to CSS in JS has to do with letting a tool do the dirty work of enforcing some rules for everybody by making that the default. I failed too many times at trying to make conventions like BEM & friends work at org level.
 
 At a larger scale good intents and conventions rarely work. The only reliable way in my opinion (and experience) is tooling, because skills are not measurable and are diverse.
 
