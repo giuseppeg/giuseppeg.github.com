@@ -97,7 +97,7 @@ Using a tool like CSS in JS brings in some benefits:
 - You can style individual elements without affecting other elements
 - You can compose `rule`s to avoid repetition and apply the resulting class name to an element
 - You can use built-in primitives like loops, variables, and do math without having to introduce a new tool like a preprocessor
-- Styles are colocated with your markup or, even authored inline and thne compiled away. This can help reducing context switching and can speed up development
+- Styles are colocated with your markup or even authored inline and then compiled away. This can help reducing context switching and can speed up development
 - No inline styles! In the end it is just CSS written with another tool - as we saw above rules are inserted into an actual style tag by the library
 - It can be prerendered on the server. This way your site sends only the CSS for the page that is serving right now
 - You don't need naming conventions anymore
