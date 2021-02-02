@@ -94,13 +94,14 @@ These "magic" `css` functions usually do a lot of things for you like automatica
 
 Using a tool like CSS in JS brings in some benefits:
 
-* You can style individual elements without affecting other things
-* You can compose those `rule`s to avoid repetition and apply the resulting class name to an element
-* You can use built-in primitives like loops, variables, and do math without having to introduce a new tool like a preprocessor
-* No inline styles! In the end it is just CSS written with another tool - as we saw here none of this is rendered as inline styles
-* It can be prerendered on the server. This way your site sends only the CSS for the page that is serving right now
-* You don't need naming conventions anymore
-* You don't need to know where the styles are coming from since they are defined locally per component
+- You can style individual elements without affecting other things
+- You can compose those `rule`s to avoid repetition and apply the resulting class name to an element
+- You can use built-in primitives like loops, variables, and do math without having to introduce a new tool like a preprocessor
+- Styles are colocated with your markup or, even authored inline and thne compiled away. This can help reducing context switching and can speed up development
+- No inline styles! In the end it is just CSS written with another tool - as we saw above rules are inserted into an actual style tag by the library
+- It can be prerendered on the server. This way your site sends only the CSS for the page that is serving right now
+- You don't need naming conventions anymore
+- You don't need to know where the styles are coming from since they are defined locally per component
 
 ## What about the Cascade?
 
@@ -110,11 +111,11 @@ Cascade usually is useful to avoid repetition, but with a reusable JS component 
 
 However, by scoping our CSS to the component, our styles won't accidentally leak into some parts of our web page.
 
-Furthermore, with CSS in JS inheritance continues to work! This means that elements keep inheriting [*inherited* properties](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance#Inherited_properties) like `color`, `font-size`, `line-height` from their anchestors until you override them. This is a sutble detail that many often ignore.
+Furthermore, with CSS in JS inheritance continues to work! This means that elements keep inheriting [_inherited_ properties](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance#Inherited_properties) like `color`, `font-size`, `line-height` from their anchestors until you override them. This is a sutble detail that many often ignore.
 
 ## Who is this for?
 
-Usually, for the ones who write their HTML in JavaScript eg. with lit-html (Polymer), React etc.
+Usually, for the ones who write their HTML in JavaScript eg. with lit-html (Polymer), React, Vue, etc.
 
 However, CSS in JS is a good solution also for more traditional approaches where you'd create HTML elements with JavaScript for the purpose of implementing a jQuery plugin or constructing some HTML after an AJAX request.
 
@@ -132,9 +133,9 @@ Under the hood they use a bit of JavaScript to provide most of the benefits that
 
 In fact I like to see CSS in JS more like a tool than an ugly bunch of CSS in JavaScript objects.
 
-## #Humans
+## Conclusion
 
-I want to conclude this write-up with a reflection on team work and diversity.
+I want to conclude this write-up with a reflection on team work and conventions.
 
 I read a few times that "people should just learn CSS" rather than looking for answers (and solutions) in CSS in JS.
 
