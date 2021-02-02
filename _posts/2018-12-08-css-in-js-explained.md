@@ -94,7 +94,7 @@ These "magic" `css` functions usually do a lot of things for you like automatica
 
 Using a tool like CSS in JS brings in some benefits:
 
-- You can style individual elements without affecting other things
+- You can style individual elements without affecting other elements
 - You can compose those `rule`s to avoid repetition and apply the resulting class name to an element
 - You can use built-in primitives like loops, variables, and do math without having to introduce a new tool like a preprocessor
 - Styles are colocated with your markup or, even authored inline and thne compiled away. This can help reducing context switching and can speed up development
