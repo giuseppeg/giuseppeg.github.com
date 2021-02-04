@@ -8,7 +8,7 @@ Senior JavaScript and Web Engineer with a decade of industry experience and avai
 
 If you want to hire me, just let me know about your project and let’s talk:
 
-<form action="https://contact-form-fn.vercel.app/api" method="post" class="Form" style="margin: 2rem auto">
+<form action="https://contact-form-fn.vercel.app/api" method="post" class="Form" style="margin: 2rem auto" id="form">
   <label
     >Company<input type="text" name="company" placeholder="Acme Inc." required
   /></label>
@@ -73,7 +73,7 @@ Over the years I have also built direct and privileged connections with engineer
 
 ## Open Source
 
-Over the years, I have done highly impactful contributions to projects like SUIT CSS, Next.js, React Native for Web and many other projects.
+Over the years, I have done highly impactful contributions to projects like SUIT CSS, Next.js, React Native for Web and many more.
 
 My most successful open source projects are [xm](https://twitter.com/giuseppegurgone/status/1305851405660549122) and Vercel's [styled-jsx](https://www.npmjs.com/package/styled-jsx) which I co-authored.
 
@@ -86,7 +86,7 @@ For example the tech team at the Swiss Red Cross hired me to improve the perform
 > The development build which previously took ~2.5 minutes
 > now takes 29 seconds!
 
-Hit me up if you want to sponsor my work or need help with open source project.
+[Hit me up](#form) if you want to sponsor my work or need help with an open source project.
 
 <script>
   document.querySelector('.Form').addEventListener('submit', event => {
