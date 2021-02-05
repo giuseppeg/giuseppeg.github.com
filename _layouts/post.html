@@ -9,7 +9,7 @@ layout: base
     <h1 class="Article-title">{{ page.title }}</h1>
     {% if page.subtitle %}<h2 class="Article-subtitle">{{ page.subtitle }}</h2>{% endif %}
   </header>
-  <a class="Article-readmo" href="{{ page.url }}" style="display: none" data-readmoapp><span class="Article-readmoIcon" aria-hidden="true">🎧</span><span class="Article-readmoIconSpace"></span>listen to this article</a>
+  <a class="Article-readmo" href="{{ page.url }}" style="visibility: hidden" data-readmoapp><span class="Article-readmoIcon" aria-hidden="true">🎧</span><span class="Article-readmoIconSpace"></span>listen to this article</a>
   <section class="Article-content">
     <div class="Copy">
       {% if page.tldr %}<div class="Note"><b>TL;DR</b> {{ page.tldr | markdownify }}</div>{% endif %}
@@ -52,7 +52,7 @@ layout: base
 <script src="https://unpkg.com/@readmo/sdk@latest?{{ site.time | date: '%s' }}"></script>
 <script>
   if (ReadMo.isBrowserSupported()) {
-    document.querySelector('[data-readmoapp]').style.display = 'block'
+    document.querySelector('[data-readmoapp]').style.visibility = 'visible'
 
     ReadMo.embed({
       meta: {
