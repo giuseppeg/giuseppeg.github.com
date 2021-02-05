@@ -9,6 +9,7 @@ layout: base
     <h1 class="Article-title">{{ page.title }}</h1>
     {% if page.subtitle %}<h2 class="Article-subtitle">{{ page.subtitle }}</h2>{% endif %}
   </header>
+  <a class="Article-readmo" href="{{ page.url }}" style="display: none" data-readmoapp><span class="Article-readmoIcon" aria-hidden="true">🎧</span><span class="Article-readmoIconSpace"></span>listen to this article</a>
   <section class="Article-content">
     <div class="Copy">
       {% if page.tldr %}<div class="Note"><b>TL;DR</b> {{ page.tldr | markdownify }}</div>{% endif %}
@@ -48,4 +49,19 @@ layout: base
     <a href="/blog" class="Article-back" title="Go back to the articles list">←</a>
   </footer>
 </article>
+<script src="https://unpkg.com/@readmo/sdk@latest?{{ site.time | date: '%s' }}"></script>
+<script>
+  if (ReadMo.isBrowserSupported()) {
+    document.querySelector('[data-readmoapp]').style.display = 'block'
+
+    ReadMo.embed({
+      meta: {
+        partner: {
+          logo: 'https://user-images.githubusercontent.com/711311/101384003-2a51ab80-38ba-11eb-8460-853d88885671.jpeg',
+          url: 'https://giuseppegurgone.com'
+        }
+      }
+    })
+  }
+</script>
 <!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
