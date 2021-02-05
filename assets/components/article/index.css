@@ -107,6 +107,7 @@
   font-size: 0.8em;
   color: var(--muted-text);
   user-select: none;
+  display: block;
 }
 
 .Article-readmo:hover:before,
