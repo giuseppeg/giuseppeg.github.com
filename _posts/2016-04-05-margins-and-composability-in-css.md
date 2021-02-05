@@ -43,13 +43,13 @@ Margins are often global and set to arbitrary standard values at the beginning o
 Take this code for example:
 
 {% highlight css %}
-/\*_ typography.css _/
+/* typography.css */
 h1 { margin: 3em 0; }
 p { margin-bottom: 1em; }
 
-/\*_ components/form.css _/
+/* components/form.css */
 .form { margin-bottom: 3em; }
-.form\_\_input { margin-bottom: 1em; }
+.form__input { margin-bottom: 1em; }
 {% endhighlight %}
 
 Here we have some global typography and default <code>margin-bottom</code> for the <code>form</code> component. A similar setup can be found in many popular or in-house CSS frameworks.
