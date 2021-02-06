@@ -55,12 +55,13 @@ layout: base
     document.querySelector('[data-readmoapp]').style.visibility = 'visible'
 
     ReadMo.embed({
-      meta: {
-        partner: {
-          logo: 'https://user-images.githubusercontent.com/711311/101384003-2a51ab80-38ba-11eb-8460-853d88885671.jpeg',
-          url: 'https://giuseppegurgone.com'
-        }
-      }
+      selector: "a[data-readmoapp]",
+      partner: {
+        name: "Giuseppe Gurgone",
+        url: "https://giuseppegurgone.com",
+        image: "https://user-images.githubusercontent.com/711311/101384003-2a51ab80-38ba-11eb-8460-853d88885671.jpeg",
+        roundedImage: true,
+      },
     })
   }
 </script>
