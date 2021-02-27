@@ -20,15 +20,15 @@ module.exports = async (req, res) => {
   return cors({ origin, allowMethods: ["POST", "OPTIONS"] })(handler)(req, res);
 };
 
+// These fields are hidden fields that bots will fill out.
+// When filled out we treat the current request as coming from a SPAMMER.
+// This is a naive and basic SPAM protection measure.
+const honeypotFields = ["fullname", "address"];
+
 async function handler(req, res) {
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
-
-  // These fields are hidden fields that bots will fill out.
-  // When filled out we treat the current request as coming from a SPAMMER.
-  // This is a naive and basic SPAM protection measure.
-  const honeypotFields = ["fullname", "address"];
 
   const requiredFieldsErrorMessages = {
     email: "Missing recipient email address",
@@ -59,7 +59,10 @@ async function handler(req, res) {
       status = 400;
       message = "Missing body";
       break;
-    case honeypotFields.some((fieldName) => body[fieldName].trim()):
+    case honeypotFields.some(
+      (fieldName) =>
+        typeof body[fieldName] === "string" && body[fieldName].trim()
+    ):
       status = 404;
       message = "Not found";
       break;
@@ -107,6 +110,7 @@ function composeSubject(formParams) {
 function composeMessage(formParams) {
   const { message, ...others } = formParams;
   return `${message}\n\n${Object.entries(others)
+    .filter(([key]) => !honeypotFields.includes(key))
     .map(([key, value]) => `- ${key}: ${value}`)
     .join("\n")}`;
 }
