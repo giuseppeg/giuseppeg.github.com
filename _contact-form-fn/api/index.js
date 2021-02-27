@@ -25,6 +25,11 @@ async function handler(req, res) {
     return res.status(200).end();
   }
 
+  // These fields are hidden fields that bots will fill out.
+  // When filled out we treat the current request as coming from a SPAMMER.
+  // This is a naive and basic SPAM protection measure.
+  const honeypotFields = ["fullname", "address"];
+
   const requiredFieldsErrorMessages = {
     email: "Missing recipient email address",
     message: "Missing message",
@@ -53,6 +58,10 @@ async function handler(req, res) {
     case !body:
       status = 400;
       message = "Missing body";
+      break;
+    case honeypotFields.some((fieldName) => body[fieldName].trim()):
+      status = 404;
+      message = "Not found";
       break;
     default: {
       const errors = Object.entries(requiredFieldsErrorMessages).filter(

@@ -13,6 +13,12 @@ If you want to hire me, just let me know about your project and let’s talk:
     >Company<input type="text" name="company" placeholder="Acme Inc." required
   /></label>
   <label
+    >Name<input type="text" name="fullname" placeholder="Jon Doe"
+  /></label>
+  <label
+    >Address<input type="text" name="address" placeholder="Market St."
+  /></label>
+  <label
     >Your email address<input
       type="email"
       name="email"
@@ -38,13 +44,15 @@ If you want to hire me, just let me know about your project and let’s talk:
       <option value="€10000+ EUR">€10000+ EUR</option>
     </select>
   </label>
-  <label
+
+<label
     >Project details<textarea
       name="message"
       placeholder="Hey Giuseppe, let's talk about working together!"
       required
     ></textarea
-  ></label>
+
+> </label>
 
 <div style="display: flex; justify-content: flex-end">
   <button>Send<span aria-hidden="true"> →</span></button>
@@ -91,13 +99,13 @@ For example the tech team at the Swiss Red Cross hired me to improve the perform
 <script>
   document.querySelector('.Form').addEventListener('submit', event => {
     event.preventDefault()
-    const confirmcode = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5)
-    const typedcode = window.prompt(`Please confirm by typing the following code:
-    ${confirmcode}
+    const confirmcode = [Math.ceil(Math.random()*10),Math.ceil(Math.random()*10)]
+    const typedcode = window.prompt(`Please confirm by typing the result of the following sum:
+    ${confirmcode[0]}+${confirmcode[1]}
     `)
 
-    if (confirmcode !== typedcode.trim()) {
-      alert('Wrong code. Please try again.')
+    if (Number(typedcode.trim()) !== confirmcode[0]+confirmcode[1]) {
+      alert('Wrong sum. Please try again.')
       return
     }
 
@@ -132,3 +140,9 @@ For example the tech team at the Swiss Red Cross hired me to improve the perform
     })
   })
 </script>
+<style>.Form > :nth-child(2), .Form > :nth-child(3) {
+  position: absolute;
+  visibility: hidden;
+  user-select: none;
+  z-index: -1
+}</style>
