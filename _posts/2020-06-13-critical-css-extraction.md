@@ -5,7 +5,7 @@ date: 2020/06/13
 preview_image: https://user-images.githubusercontent.com/711311/84544531-c29d1800-acfd-11ea-9cfc-ce8fa27dd37b.png
 ---
 
-In this blog post I want to share a technique for extracting the CSS needed to render a static or server side rendered web page [using JSDOM and PostCSS](#implementing-extraction-with-jsdom-and-postcss).
+In this blog post I want to share a technique for extracting the CSS needed to style a static or server side rendered web page [using JSDOM and PostCSS](#implementing-extraction-with-jsdom-and-postcss).
 
 ## What is Critical CSS
 
