@@ -25,6 +25,7 @@
   border: 1px solid transparent;
   border-bottom-color: var(--text-color);
   font: inherit;
+  color: var(--text-color);
   padding: 0.25rem 0.5rem;
 }
 
