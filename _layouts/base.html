@@ -101,20 +101,6 @@
     </nav>
     {% if site.inc.navafter == false %}
     <main>{{ content }}</main>
-    {% endif %} {% if site.inc.google_analytics_id %}
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id={{ site.inc.google_analytics_id }}"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "{{ site.inc.google_analytics_id }}");
-    </script>
     {% endif %} {% if page.id %}
     <script>
       !(function(e) {
@@ -133,6 +119,12 @@
       })(document.querySelector && document.querySelector(".Article-content"));
     </script>
     {% endif %}
+    <!-- Cloudflare Web Analytics --><script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "212f94be22414d25af0ea64230f55e8d"}'
+    ></script
+    ><!-- End Cloudflare Web Analytics -->
     <script
       src="//instant.page/5.1.0"
       type="module"
