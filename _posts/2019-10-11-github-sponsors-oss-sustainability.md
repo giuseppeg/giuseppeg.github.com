@@ -16,56 +16,70 @@ Having to define dontation tiers was an interesting exercise because I had to fi
 
 ## Will it work?
 
-Getting people to donate is a very hard thing to do, and it is definitely harder for those who are no influencers because they lack visibility.
+Getting people to donate is a very hard thing to do and it is definitely harder for those who are not well known public figures.
 
 Not to mention that asking for a donation feels a bit like asking strangers on the street for money, maybe for a service that you deliver to somebody else. 🙃
 
-~~Overall, I have a job and I am lucky enough to not have to rely on OSS funding to make a living~~. [I am available for hire](/hire-me). I work on side projects and OSS at random times and for fun, so much so that I started a (very WIP) personal [Open Source Contributor Manifesto and Policies](https://github.com/giuseppeg/contributing) to communicate this to others.
+## Tiers and Current Sponsors
 
-If you want to pursuit the OSS funding path my recommendation would be to invest in personal branding first.
+After a bit of thinking, I eventually decided to create a tier for symbolic donations of $5/mo and a few tiers for library support ($150/mo), company sponsors ($250/mo) and actual library work ($2000/mo).
+
+To date I have **1** "library support" [sponsor](https://twitter.com/giuseppegurgone/status/1353926784589443073) and got one \$2000+ private consulting deal through one of my open source repos.
+
+This is not much but nice nonetheless.
+
+Thanks to Twitter and OSS, over the years I have grown a nice network and working on free open source has paid back in terms of opportunities and leads – especially now that I am self employed and I [work as a consultant](https://giuseppegurgone.com/contact).
+
+That said FOSS work per-se hasn't been financially sustainable and I have put it on hold for a while. Now I only work on side projects and OSS at random times and for fun, so much so that I started a (very WIP) personal [Open Source Contributor Manifesto and Policies](https://github.com/giuseppeg/contributing) to communicate this to others.
+
+## Who do I Sponsor?
+
+Since when I went self employed I have started to sponsor a few developers who are maintainers or authors of libraries that I have used in clients projects.
+
+I have also been thinking about starting to transparently charge an Open Source Tax to clients. This would be a little extra that I would then donate to open source.
+
+As a solo developer you end up appreciating the value of FOSS way more:
 
 <div class="Copy-embedTweet">
-<blockquote class="twitter-tweet" data-conversation="none" data-link-color="#008000"><p lang="en" dir="ltr">Want to know the real answer? Marketing!<br><br>- Speak at confs<br>- Write articles<br>- Tweet tweet tweet tweet tweet</p>&mdash; Max Stoiber (@mxstbr) <a href="https://twitter.com/mxstbr/status/1026334495975329793?ref_src=twsrc%5Etfw">August 6, 2018</a></blockquote> <!-- <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I have figured out an incredible way of scaling yourself as a solo-entrepreneur: GitHub sponsorships.<br><br>I took six key open-source projects that reflect.app uses, sponsored them to the max, and then worked with the authors to add features and fix bugs.</p>&mdash; Alex MacCaw (@maccaw) <a href="https://twitter.com/maccaw/status/1390765157677142017?ref_src=twsrc%5Etfw">May 7, 2021</a></blockquote>
 </div>
 
-**Update** to date I have **0** sponsors. Clearly I haven't worked on marketing and none of my projects is that valuable, yet I get a constant stream of issues/PRs.
+## My Opinion on FOSS Sustainability
 
-## Alternatives to donation-based systems
+Clearly FOSS provides value but I doubt that it will ever be sustainable for the many of us. In fact I think that it is probably time to stop hoping for it to become sustainable :)
 
-GitHub Sponsors and donation based platforms are great for some, but ultimately I think that the path to OSS sustainability is to reward developers based on usage stats (installs or consumers/licenses) or provide services around OSS.
+FOSS should either be an act of giving-back and sharing with the community or, for the ones who'd like to make a living off of it, a product that comes with companion paid solutions:
 
-For example I have this tiny project that has 24k downloads a month. In this space it is nothing but nonetheless it is definitely providing value to some. How could this translate to a few bucks? 🤷‍♂️
+<div class="Copy-embedTweet">
+  <blockquote class="twitter-tweet" data-conversation="none" data-link-color="#008000"><p lang="en" dir="ltr">Look for opportunities to open source what you&#39;ve built at work, otherwise try to come up with a monetization strategy upfront. You don&#39;t have to implement it right away but you should be able to go for it when and if necessary.</p>&mdash; Giuseppe (@giuseppegurgone) <a href="https://twitter.com/giuseppegurgone/status/1388198291041660928?ref_src=twsrc%5Etfw">April 30, 2021</a></blockquote>
+</div>
+
+Your paid service should solve a problem. Examples are:
+
+- Cypress → Cypress Dashboard (metrics, smart test runs orchestrations, flaky tests management etc.)
+- Storybook → Chromatic (deployment, review, and test)
+- Next.js → Vercel (hosting)
+
+I know from experience that companies pay for services, easily.
+
+Obviously this requires twice as much work² as you need to come up with a useful piece of software and a service to support it but that's part of the game I guess 🤷‍♂️
+
+...and I think that's why many ambitious folks are creating OSS-centric companies and getting funding from VCs.
+
+## Other Alternatives to Donation-Based Systems
+
+GitHub Sponsors and donation based platforms are great for some but ultimately I think that a path to OSS sustainability could be to reward developers based on usage stats (installs or consumers/licenses) or provide services around OSS.
+
+For example I have this tiny project that has 71k downloads a month. In this space it is nothing but nonetheless it is definitely providing value to some. How could this translate to a few bucks? 🤷‍♂️
 
 <figure>
-<img src="https://user-images.githubusercontent.com/711311/66648696-78bed800-ec2c-11e9-81b2-1ba89b4cf668.png" alt>
-<figcaption>Non-profitable OSS with 24k monthly download.</figcaption>
+<img src="https://user-images.githubusercontent.com/711311/117888161-043d9680-b2b2-11eb-991d-da41fe24b94c.png" alt>
+<figcaption>Non-profitable OSS with 71000 monthly download.</figcaption>
 </figure>
 
-### Services
+I am also co-author and have been maintainer of styled-jsx a library with **1.5M download per week** that is used by companies like TikTok, Hulu and earn \$0/mo from this.
 
-The more I observe the OSS space, the more I think that the only real way to make OSS sustainable is to build services around it and sell those instead of the software itself.
-
-Focusing on providing services has proven to be working well for many companies.
-
-On the other end this means that individual contributors are now required to build a business to sustain their work on the actual code and not every developer is a business person.
-
-### Paid Packages
-
-A very controversial solution that I have had in mind for a while is _paid packages_.
-
-Library owners could make a buck from every user of their library by integrating with a centralized service that would require customers to provide a license token (in the form of environment variable) when they install a library. When users haven't paid for the library, the install would fail.
-
-{% highlight bash %}
-$ PAID_PACKAGES_TOKEN=123 pip install <package-name>
-🔴 PAID PACKAGES: Error
-   <package-name> is a paid package.
-   In order to use it please donate $1 a month to it.
-https://paidpackages.io/support/package-name
-{% endhighlight %}
-
-Core members of packages (maintainers) would do revenue sharing or collect funds under an organization. Occasional contributors would either get some kind of credit or get to use the library for free.
-
-You can read [more about this idea on GitHub](https://github.com/giuseppeg/paid-packages).
+If I was paid per usage probably I would be making a nice living and could work on this stuff full time :)
 
 ### Support and Training
 
@@ -73,7 +87,7 @@ Selling support and training are probably other viable options for people who wa
 
 ### Getting Hired
 
-There are companies that use and produce Open Source Software all the time. An example are ZEIT or Gatsby. Getting a job at such companies could potentially mean that you wouldn't have to work on OSS in your spare time anymore.
+There are companies that use and produce Open Source Software all the time. An example are Vercel or Gatsby. Getting a job at such companies could potentially mean that you wouldn't have to work on OSS in your spare time anymore.
 
 ### Crowdfunding
 
@@ -89,7 +103,7 @@ I really hope that they are monitoring the donation based space and eventually w
 
 **Update** forget this, [npm has been acquired by GitHub](https://github.blog/2020-04-15-npm-has-joined-github) :)
 
-### A Success Story
+### Sponsorware – A Success Story
 
 If you want to read about a success story check this out [https://calebporzio.com/i-just-hit-dollar-100000yr-on-github-sponsors-heres-how-i-did-it](https://calebporzio.com/i-just-hit-dollar-100000yr-on-github-sponsors-heres-how-i-did-it).
 
